@@ -3,8 +3,6 @@ using System.Linq;
 using System.Web.Mvc;
 using USSP.Service;
 using USSP.Models.CORE;
-using Kendo.Mvc.Extensions;
-using Kendo.Mvc.UI;
 
 
 namespace USSP.Controllers
@@ -42,18 +40,18 @@ namespace USSP.Controllers
             return View("PickListListing");
         }
 
-        /// <summary>
-        /// Method to bind to the Grid
-        /// </summary>
-        /// <param name="request"></param>
-        /// <returns></returns>
-        public ActionResult ReadPickList([DataSourceRequest] DataSourceRequest request)
-        {
+        ///// <summary>
+        ///// Method to bind to the Grid
+        ///// </summary>
+        ///// <param name="request"></param>
+        ///// <returns></returns>
+        //public ActionResult ReadPickList([DataSourceRequest] DataSourceRequest request)
+        //{
 
-            var list = _pickListProvider.GetPickLists();
+        //    var list = _pickListProvider.GetPickLists();
 
-            return Json(_pickListProvider.GetPickLists().ToDataSourceResult(request),JsonRequestBehavior.AllowGet);
-        }
+        //    return Json(_pickListProvider.GetPickLists().ToDataSourceResult(request),JsonRequestBehavior.AllowGet);
+        //}
 
         /// <summary>
         /// Method to Bind to List Type : ListBox
