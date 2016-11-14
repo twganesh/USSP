@@ -2,7 +2,6 @@
 using System.Web.Mvc;
 using USSP.Service;
 using USSP.Models.DTO;
-using Kendo.Mvc.UI;
 using System.Collections.Generic;
 
 namespace ShippingPaper.Controllers
@@ -39,13 +38,13 @@ namespace ShippingPaper.Controllers
            
         }
 
-        public ActionResult ReadList([DataSourceRequest] DataSourceRequest request)
-        {
+        //public ActionResult ReadList([DataSourceRequest] DataSourceRequest request)
+        //{
 
-            List<DTOOpenTMSShipments> openTMSShipments = _tmsProvider.getOpenTMSShipments("");
+        //    List<DTOOpenTMSShipments> openTMSShipments = _tmsProvider.getOpenTMSShipments("");
 
-            return Json(openTMSShipments, JsonRequestBehavior.AllowGet);
-        }
+        //    return Json(openTMSShipments, JsonRequestBehavior.AllowGet);
+        //}
 
 
 
