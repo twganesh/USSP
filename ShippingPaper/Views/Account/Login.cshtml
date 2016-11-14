@@ -1,0 +1,84 @@
+﻿
+@{
+    Layout = null;
+}
+
+@*<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Login</title>
+    </head>
+    <body>
+        <div>
+        </div>
+    </body>
+    </html>*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>US Shipping Paper</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" /> 
+    <link href="~/Content/css/login.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 col-centered" id="loginBox">
+                <div class="row loginBoxHeader">
+                    <div class="col-md-12">
+                        <div class="pull-left logo">
+                            <a href="#" class="ussp-logo" alt="USSP"></a>
+                        </div>
+                        <div class="logo">
+                            <a href="#" class="slb-logo"  alt="schlumberger"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row grayBorder">
+                    <div class="col-md-6">
+                        <div class="loginMsg padding"><b>Click here for automatic login to US Shipping application using your windows login.</b></div>
+                        <div class="form-group ssoLogin">
+                            <button type="button" class="btn btn-primary ssoLogin btn-submit"><b>SSO Login</b></button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 grayBorderleft">
+                        <div class="loginMsg padding"><b>Please login using your Ldapalias, Full name & LdapUser Id.</b></div>
+                        <div class="formPadding">
+                            <form name="" method="">
+                                <div class="form-group row">
+                                    <div class="col-md-3"><span class="txtlabel">Username</span></div>
+                                    <div class="col-md-9"><input class="form-control inputHeightWidth" id="" name="" type="text"></div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-3"><span class="txtlabel">Password</span></div>
+                                    <div class="col-md-9"><input class="form-control inputHeightWidth" id="" name="" type="password"></div>
+                                </div>
+                                <div class="form-group pull-right row rowMargin">
+                                    <div class="displayInline"><button type="button" class="btn btn-primary btn-sm buttonHeightWidth btn-submit"><b>Login</b></button></div>
+                                    <div class="displayInline"><button type="button" class="btn btn-default btn-sm buttonHeightWidth btn-reset"><b>Clear</b></button></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="copyright">
+                &copy; 2016 Schlumberger Limited. All rights reserved.
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery-2.1.4.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

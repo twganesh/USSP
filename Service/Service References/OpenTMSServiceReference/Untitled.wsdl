@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.slb.com/SIMS/prjBroker_005_aa/WCShipmentServiceWSDL" name="Untitled" targetNamespace="http://www.slb.com/SIMS/prjBroker_005_aa/WCShipmentServiceWSDL" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.slb.com/SIMS/prjBroker_005_aa/WCShipmentServiceWSDL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="OpenTMSShipment">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="TMSShipmentID">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="ShipmentStop">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="District" type="xs:string" />
+                        <xs:element name="Source" type="xs:string" />
+                        <xs:element name="Destination" type="xs:string" />
+                        <xs:element name="CreatedBy" type="xs:string" />
+                      </xs:sequence>
+                      <xs:attribute name="stopId" type="xs:short" use="required" />
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+                <xs:attribute name="Id" type="xs:string" use="required" />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Request">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="TMSShipmentId" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="WcShipmentServiceRequest">
+    <wsdl:part name="Request" element="tns:Request" />
+  </wsdl:message>
+  <wsdl:message name="WcShipmentServiceResponse">
+    <wsdl:part name="Response" element="tns:OpenTMSShipment" />
+  </wsdl:message>
+  <wsdl:portType name="PortType">
+    <wsdl:operation name="WcShipmentService">
+      <wsdl:input message="tns:WcShipmentServiceRequest" />
+      <wsdl:output message="tns:WcShipmentServiceResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PortTypeEndpoint1Binding" type="tns:PortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WcShipmentService">
+      <soap:operation soapAction="/001802.O_USShippingPaper-WERCS.NET_TMSNAM_WCShipment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="Request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="Response" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WCShipmentService">
+    <wsdl:port name="PortTypeEndpoint1" binding="tns:PortTypeEndpoint1Binding">
+      <soap:address location="http://qa04.sims.slb.com:10855/001802.O_USShippingPaper-WERCS.NET_TMSNAM_WCShipment" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

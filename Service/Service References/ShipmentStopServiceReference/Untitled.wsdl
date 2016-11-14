@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.slb.com/SIMS/prjBroker_005_aa/ODShipmentQryServiceWSDL" xmlns:ns0="http://www.slb.com/ODShipmentQryService" name="Untitled" targetNamespace="http://www.slb.com/SIMS/prjBroker_005_aa/ODShipmentQryServiceWSDL" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns="http://www.slb.com/ODShipmentQryService" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.slb.com/ODShipmentQryService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="Request">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="USSP_User_Alias" type="xs:string" />
+            <xs:element minOccurs="0" name="ShipmentId" type="xs:string" />
+            <xs:element minOccurs="0" name="Stop" type="xs:string" />
+            <xs:element minOccurs="0" name="Origin" type="xs:string" />
+            <xs:element minOccurs="0" name="Destination" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TMSShipmentDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="TMShipment">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ShipmentStop">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Header">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="WellSite" type="ns0:WellSiteLov" />
+                              <xs:element default="" name="District" type="xs:string" />
+                              <xs:element default="" name="OperatorDriver" type="xs:string" />
+                              <xs:element name="DateShipped" type="ns0:StringMandate" />
+                              <xs:element name="TreatmentNumber" type="ns0:StringMandate" />
+                              <xs:element default="" name="TruckNumber" type="xs:string" />
+                              <xs:element default="" name="TrailerNumber" type="xs:string" />
+                              <xs:element default="" name="Customer" type="xs:string" />
+                              <xs:element name="JobLocation" type="ns0:StringMandate" />
+                              <xs:element default="" name="WellJobName" type="xs:string" />
+                              <xs:element default="" name="SpecialInstructions" type="xs:string" />
+                              <xs:element name="ColoradoWell" type="ns0:ColoradoWellLOV" />
+                              <xs:element default="" name="Radioactive" type="xs:string" />
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="DOTDescriptions">
+                          <xs:complexType>
+                            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                              <xs:element name="DOTLineItem">
+                                <xs:complexType>
+                                  <xs:sequence>
+                                    <xs:element default="Product Code" name="Category" type="xs:string" />
+                                    <xs:element name="ProductCode" type="xs:string" />
+                                    <xs:element default="" name="TypeofPackage" type="xs:string" />
+                                    <xs:element default="" name="Location" type="xs:string" />
+                                    <xs:element name="ActualQuantity" type="xs:string" />
+                                    <xs:element name="PerPackage" type="ns0:PerPackageLOV" />
+                                    <xs:element name="NumberOfPackage" type="xs:string" />
+                                    <xs:element name="OrderReleaseID" type="xs:string" />
+                                  </xs:sequence>
+                                  <xs:attribute name="OrderShipmentId" type="xs:string" />
+                                </xs:complexType>
+                              </xs:element>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="SpecialSafetyInstructions">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element default="" name="SpecialSafetyEquipmentRequired" type="xs:string" />
+                              <xs:element default="" name="Certifiedby" type="xs:string" />
+                              <xs:element default="" name="LoadDateTime" type="xs:string" />
+                              <xs:element default="" name="LoadTimeZone" type="xs:string" />
+                              <xs:element name="ReturnLoadDate" type="ns0:StringMandate" />
+                              <xs:element name="JobSupervisor" type="ns0:StringMandate" />
+                              <xs:element default="" name="ReturnLoadOperator" type="xs:string" />
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                      <xs:attribute name="Id" type="xs:byte" />
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+                <xs:attribute name="Id" type="xs:string" />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:simpleType name="ColoradoWellLOV">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Yes" />
+          <xs:enumeration value="No" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="LoadTimeZoneLOV">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Atlantic Standard Time" />
+          <xs:enumeration value="Central Standard Time" />
+          <xs:enumeration value="Mountain Standard Time" />
+          <xs:enumeration value="Pacific Standard Time" />
+          <xs:enumeration value="Alaska Standard Time" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="LocationLOV">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Not Used" />
+          <xs:enumeration value="Front" />
+          <xs:enumeration value="Middle" />
+          <xs:enumeration value="Back" />
+          <xs:enumeration value="Side" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="PerPackageLOV">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="galUS" />
+          <xs:enumeration value="lbs" />
+          <xs:enumeration value="ea" />
+          <xs:enumeration value="KG" />
+          <xs:enumeration value="TN" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="SPDateTime">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="(([0]?[1-9]|1[0-2])/([0-2]?[0-9]|3[0-1])/[1-2][0-9]{3}) ((([0-1]?[0-9])|(2[0-3])):[0-5][0-9])(:[0-5][0-9])" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="StringMandate">
+        <xs:restriction base="xs:string">
+          <xs:minLength value="1" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="TypeOfPackageLOV">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="500" />
+          <xs:enumeration value="ABT" />
+          <xs:enumeration value="AIR SLIDE" />
+          <xs:enumeration value="BAG" />
+          <xs:enumeration value="BOX" />
+          <xs:enumeration value="CARGO TANK" />
+          <xs:enumeration value="DRUM" />
+          <xs:enumeration value="Intermediate Bulk Container IBC (TOTE) &gt; 119 galUS" />
+          <xs:enumeration value="MPT" />
+          <xs:enumeration value="PAIL" />
+          <xs:enumeration value="PORTABLE TANK  LTH; 119 galUS" />
+          <xs:enumeration value="PORTABLE TANK  119 galUS" />
+          <xs:enumeration value="SACK" />
+          <xs:enumeration value="SAND DUMP" />
+          <xs:enumeration value="SUPER SACK" />
+          <xs:enumeration value="SZ 300 Cylinder 12 PK" />
+          <xs:enumeration value="SZ 300 Cylinder 9 pack" />
+          <xs:enumeration value="TOTE  119 galUS" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="WellSiteLov">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Land" />
+          <xs:enumeration value="Offshore" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ODShipmentQryServiceRequest">
+    <wsdl:part name="Request" element="ns0:Request" />
+  </wsdl:message>
+  <wsdl:message name="ODShipmentQryServiceResponse">
+    <wsdl:part name="Response" element="ns0:TMSShipmentDetails" />
+  </wsdl:message>
+  <wsdl:portType name="PortType1">
+    <wsdl:operation name="ODShipmentQryService">
+      <wsdl:input message="tns:ODShipmentQryServiceRequest" />
+      <wsdl:output message="tns:ODShipmentQryServiceResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PortType1Endpoint1Binding" type="tns:PortType1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ODShipmentQryService">
+      <soap:operation soapAction="/001801.O_USShippingPaper-WERCS.NET_TMSNAM_ODShipmentQry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="Request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="Response" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ODShipmentQryService">
+    <wsdl:port name="PortType1Endpoint1" binding="tns:PortType1Endpoint1Binding">
+      <soap:address location="http://qa04.sims.slb.com:10855/001801.O_USShippingPaper-WERCS.NET_TMSNAM_ODShipmentQry" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

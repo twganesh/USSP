@@ -1,0 +1,96 @@
+﻿
+
+@{
+    //    Layout = "~/Views/Shared/_layout.cshtml";
+    Layout = null;
+
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+
+    @Styles.Render("~/Content/kendo/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/kendo")
+
+    
+    <script type="text/javascript">
+
+        function filterTypes() {
+            return {
+                PickListTypes: $("#lstType").data("kendoDropDownList").value(),
+            };
+        }
+
+    </script>
+
+   
+
+</head>
+
+
+<body>
+    <div>
+
+    
+
+@(Html.Kendo()
+    .DropDownList()
+    .Name("documentTypes")
+    .DataTextField("Type")
+    .DataValueField("Value")
+    .DataSource(source =>
+    {
+        source.Read(read =>
+        {
+            read.Action("GetPickListType", "PickList");
+
+        });
+
+
+
+    })
+    )
+
+
+        @(Html.Kendo()
+                            .Grid<USSP.Models.CORE.PickList>()
+                            .Columns(cols =>
+                            {
+                                cols.Bound(c => c.Id);
+                                cols.Bound(c => c.Type);
+                                cols.Bound(c => c.Value);
+                                cols.Bound(c => c.SortOrder);
+                            }
+                            )
+                            .Name("picklistGrid")
+                            .Navigatable()
+                            .Pageable(i => i.Refresh(true).PageSizes(true))
+                            .Sortable()
+                            .Selectable()
+                            .Filterable()
+                            .Scrollable(scrolling => scrolling.Enabled(true))
+                            .Resizable(r => r.Columns(true))
+                            .Reorderable(reorder => reorder.Columns(true))
+                           .EnableCustomBinding(true)
+                            .DataSource(dataSource => dataSource
+                            .Ajax()
+                            .PageSize(10)
+                            .Read(
+                                    read => read.Action("ReadPickList", "PickList")
+                                )
+                            )
+                            .AutoBind(true)
+
+        )
+
+
+
+    </div>
+</body>
+</html>

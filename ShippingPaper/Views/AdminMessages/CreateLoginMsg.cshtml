@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewBag.Title = "CreateLoginMsg";
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<div class="row rowMargin searchLabelRow">
+    <div class="col-md-4">
+        <div class=""><span class="searchLabel">Create Login Message</span></div>
+    </div>
+    <div class="col-md-4" align="center">
+        <div class=""><span class="time-out-label">Timeout after <span class="timeLimit">XX:XX</span> min of inactivity</span></div>
+    </div>
+    <div class="col-md-4">
+        <div class="pull-right"><span class="mandatory-field-label"><span class="mandatory">*</span>Mandatory field</span></div>
+    </div>
+</div>
+<div class="row rowMargin rowBorder">
+    <div class="row rowMargin row-margin-top">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div class=""><span class="txtlabel">Begin Date</span></div>
+                        <div class="display-inline-div inputMarginbottom">
+                            <select class="form-control inputHeightWidth" id="" name="">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                        <div class="inner-addon right-addon display-inline-div inputMarginbottom">
+                            <input class="form-control inputHeightWidth datepicker" id="" name="" type="text">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                        </div>
+                        <span class="txtlabel display-inline-label">and</span>
+                        <div class="inner-addon right-addon display-inline-div inputMarginbottom">
+                            <input class="form-control inputHeightWidth datepicker" id="" name="" type="text">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div class=""><span class="txtlabel">End Date</span></div>
+                        <div class="display-inline-div inputMarginbottom">
+                            <select class="form-control inputHeightWidth" id="" name="">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                        <div class="inner-addon right-addon display-inline-div inputMarginbottom">
+                            <input class="form-control inputHeightWidth datepicker" id="" name="" type="text">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                        </div>
+                        <span class="txtlabel display-inline-label">and</span>
+                        <div class="inner-addon right-addon display-inline-div inputMarginbottom">
+                            <input class="form-control inputHeightWidth datepicker" id="" name="" type="text">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row rowMargin row-margin-bottom">
+        <div class="col-md-12">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Message</span></div>
+                <div class=""><textarea class="form-control inputHeightWidth" id="" name="" type="text" rows="5"></textarea></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row rowMargin row-margin-top">
+    <div class="col-md-12 inputMarginbottom input-margin-top" align="center">
+        <button type="button" class="btn btn-default btn-sm btn-reset">Preview</button>
+        <button type="button" class="btn btn-primary btn-sm btn-submit">Create</button>
+        <button type="button" class="btn btn-default btn-sm btn-reset">Reset</button>
+        <button type="button" class="btn btn-default btn-sm btn-reset">Cancel</button>
+    </div>
+</div>
+

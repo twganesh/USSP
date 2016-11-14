@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "CreateUser";
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<div class="row rowMargin searchLabelRow">
+    <div class="col-md-4">
+        <div class=""><span class="searchLabel">Create User</span></div>
+    </div>
+    <div class="col-md-4" align="center">
+        <div class=""><span class="time-out-label">Timeout after <span class="timeLimit">XX:XX</span> min of inactivity</span></div>
+    </div>
+    <div class="col-md-4">
+        <div class="pull-right"><span class="mandatory-field-label"><span class="mandatory">*</span>Mandatory field</span></div>
+    </div>
+</div>
+<div class="row rowMargin rowBorder">
+    <div class="row rowMargin">
+        <div class="col-md-12">
+            <div class="row rowMargin row-margin-top">
+                <div class="col-md-6">
+                    <div class=""><span class="txtlabel">Enter Alias, LDAP</span></div>
+                    <div class="">
+                        <input class="form-control inputHeightWidth inputMarginbottom pull-left search-input-width" id="" name="" type="text">
+                        <button type="button" class="btn btn-primary btn-sm btn-submit pull-left">Lookup LDAP <i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row rowMargin" style="background:#F2F2F2">
+        <div class="col-md-12">
+            <div class="row rowMargin row-margin-top">
+                <div class="col-md-12">
+                    <div class=""><span class="txt-simple">This information has been retrieved from LDAP</span></div>
+                </div>
+            </div>
+            <div class="row rowMargin row-margin-bottom">
+                <div class="col-md-4">
+                    <div class="txtlabel">Name - FirstnameLastname</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="txtlabel">Email - Firstname.Lastname@slb.com</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="txtlabel">LDAP Location - Dubai</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row rowMargin">
+        <div class="col-md-12">
+            <div class="row rowMargin row-margin-top">
+                <div class="col-md-12">
+                    <div class=""><span class="txtlabel">User Level</span></div>
+                </div>
+            </div>
+            <div class="row rowMargin row-margin-bottom">
+                <div class="col-md-8 user-level">
+                    <ul>
+                        <li><label class="radio-inline txt-simple"><input type="radio" name="optradio">Site Administrator (Full access to all operations)</label></li>
+                        <li><label class="radio-inline txt-simple"><input type="radio" name="optradio">TC Administration (TC administrator with most site-wide privileges)</label></li>
+                        <li><label class="radio-inline txt-simple"><input type="radio" name="optradio">QHSE Compliance Manager (QHSE manager with some site-wide privileges)</label></li>
+                        <li><label class="radio-inline txt-simple"><input type="radio" name="optradio">User (User with limited access)</label></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row rowMargin row-margin-top">
+    <div class="col-md-12" align="center">
+        <button type="button" class="btn btn-primary btn-sm btn-submit">Create</button>
+        <button type="button" class="btn btn-default btn-sm btn-reset">Reset</button>
+        <button type="button" class="btn btn-default btn-sm btn-reset">Cancel</button>
+    </div>
+</div>
+

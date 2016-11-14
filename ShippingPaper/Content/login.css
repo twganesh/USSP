@@ -1,0 +1,176 @@
+* {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+body
+{
+	position: relative;
+	margin: 0;
+	padding-bottom: 2rem;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000;
+	font-size: 14px;
+	background: #e0e0e0;
+	height: 100%;
+}
+
+.col-centered{ 
+	margin-top:10%;
+	margin-left:30%;
+	margin-right:30%;	
+}
+
+.ssoLogin{	
+	margin-left:5%;
+	margin-right:5%;
+	height:34px;
+	padding:0px;
+	width:90%;
+	font-size:108%;		
+}
+
+#loginBox  {
+	background-color:#FFF;	
+	width:40%;	
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.loginBoxHeader {	
+	background-color: #e0e0e0;	
+	padding:2%;
+}
+
+.copyright{
+	margin-top:0.5%;	
+	font-size: 80%;	
+	color: #808080;
+	text-align:center;	
+}
+.padding{
+	padding:5%;
+}
+
+.formPadding{
+	padding:5%;	
+}
+
+.grayBorder{
+ border: 1px solid #DADADA;
+}
+
+.grayBorderleft{
+	border-left:1px solid #DADADA;		
+}
+
+.grayBorderRight{
+	border-right:1px solid #DADADA;	
+}
+
+.grayBorderTop{
+	border-top:1px solid #DADADA;	
+}
+
+.grayBorderbottom{
+	border-bottom:1px solid #DADADA;	
+}
+
+.glass{
+	background:#1D3662;
+	background: linear-gradient(#6D8DB3,#1D3662,#1D3662,#1D3662);
+	background: -webkit-linear-gradient(#6D8DB3,#1D3662,#1D3662,#1D3662); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#6D8DB3,#1D3662,#1D3662,#1D3662);/* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#6D8DB3,#1D3662,#1D3662,#1D3662); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#6D8DB3,#1D3662,#1D3662,#1D3662); /* Standard syntax */
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	border-color:#1D3662;
+}
+
+.glass:hover{
+	background:#1D3662;	
+}
+
+.txtlabel{
+	color: #808080;
+	font-size: 80%;	
+	font-weight: bold;
+}
+
+.loginMsg{
+	font-size:80%;
+}
+
+.logo{
+	margin-top:1%;
+	font-size:85%;
+	font-weight: bold;
+	color:white;	
+}
+
+.slb-logo
+{
+	width: 100px;	
+	height: 25px;	
+	float: right;
+	background: url(../images/Login_Schlumberger.png) no-repeat;
+}
+
+.ussp-logo
+{
+	width: 188px;	
+	height: 27px;	
+	float: right;
+	background: url(../images/USSP_logo.png) no-repeat;
+}
+.displayInline{
+	display:inline;	
+}
+
+.inputHeightWidth{
+	height:28px;
+	padding:5px;	
+}
+
+.buttonHeightWidth{	
+	
+}
+
+.btn-reset{
+	border: 1px solid #ccc;
+    background: url(../images/resetBg.png) repeat-x;
+    color: #666666;
+    margin-left: 10px;	
+}
+
+.btn-reset:hover{
+	border: 1px solid #ccc;
+    background: url(../images/resetBg.png) repeat-x;
+    color: #000;
+    margin-left: 10px;	
+}
+
+.btn-submit{
+	border: 1px solid #245580;
+	background: url(../images/submitBg.png) repeat-x;
+	color: #fff;
+	margin-left: 10px;
+}
+
+.btn-submit:hover{
+	border: 1px solid #245580;
+	background: url(../images/submitBg.png) repeat-x;
+	color: #fff;
+	margin-left: 10px;
+}
+
+.rowMargin {
+    margin-right:0px;
+    margin-left: 0px;			
+}
+
+
+
+
+
+
+
+

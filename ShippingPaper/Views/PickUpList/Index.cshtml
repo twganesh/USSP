@@ -1,0 +1,226 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<div class="row rowMargin searchLabelRow">
+    <div class="col-md-4">
+        <div class=""><span class="searchLabel">Administration - Pickup Lists</span></div>
+    </div>
+    <div class="col-md-4" align="center">
+        <div class=""><span class="time-out-label">Timeout after <span class="timeLimit">XX:XX</span> min of inactivity</span></div>
+    </div>
+    <div class="col-md-4">
+        <div class="pull-right"><span class="mandatory-field-label"><span class="mandatory">*</span>Mandatory field</span></div>
+    </div>
+</div>
+<div class="row rowMargin rowBorder">
+    <div class="row rowMargin row-margin-top">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class=""><span class="txtlabel">List (Ctrl keyto select multiple)</span></div>
+                    <div class="">
+                        <select class="form-control inputHeightWidth box-width inputMarginbottom" id="" name="" multiple>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class=""><span class="txtlabel">Value</span></div>
+                    <div class=""><input class="form-control inputHeightWidth box-width inputMarginbottom" id="" name="" type="text"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class=""><span class="txtlabel">Output Options</span></div>
+                    <div class="">
+                        <select class="form-control inputHeightWidth box-width inputMarginbottom" id="" name="">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row rowMargin row-margin-bottom">
+        <div class="col-md-4">
+            <div class=""><span class="txtlabel">Send Email to</span></div>
+            <div class="">
+                <input class="form-control inputHeightWidth box-width inputMarginbottom" id="" name="" type="text">
+                <a href="#" class="txtlabel select-from-ldap">Select from LDAP</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class=""><span class="txtlabel">Send CC to</span></div>
+            <div class="">
+                <input class="form-control inputHeightWidth box-width inputMarginbottom" id="" name="" type="text">
+                <a href="#" class="txtlabel select-from-ldap">Select from LDAP</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+</div>
+<div class="row rowMargin row-margin-top">
+    <div class="col-md-12 inputMarginbottom input-margin-top" align="center">
+        <button type="button" class="btn btn-primary btn-sm btn-submit">Create</button>
+        <button type="button" class="btn btn-default btn-sm btn-reset">Reset</button>
+        <button type="button" class="btn btn-default btn-sm btn-reset">Cancel</button>
+    </div>
+</div>
+<div class="row rowMargin">
+    <div class="col-md-12 tablePadding">
+        <div class="row rowMargin search-heading header-row">
+            <div class="col-md-6">
+                <b>Pickup Lists</b>
+            </div>
+            <div class="col-md-6">
+                <a href="createPickUpList.html" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-plus"></span> Create Pick-up List</a>
+            </div>
+        </div>
+        <div class="row rowMargin">
+            <div class="col-md-12 tablePadding">
+                <table class="t01">
+                    <tr>
+                        <th>ID.</th>
+                        <th>List</th>
+                        <th>Value</th>
+                        <th>Sort Order</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr>
+                        <td>XX</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#" title="Delete" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-trash"></span> Delete</a>
+                            <a href="#" title="Delete" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-plus"></span> Update</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>XX</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#" title="Delete" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-trash"></span> Delete</a>
+                            <a href="#" title="Delete" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-plus"></span> Update</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>XX</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#" title="Delete" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-trash"></span> Delete</a>
+                            <a href="#" title="Delete" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-plus"></span> Update</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>XX</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#" title="Delete" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-trash"></span> Delete</a>
+                            <a href="#" title="Delete" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-plus"></span> Update</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>XX</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#" title="Delete" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-trash"></span> Delete</a>
+                            <a href="#" title="Delete" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-plus"></span> Update</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>XX</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#" title="Delete" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-trash"></span> Delete</a>
+                            <a href="#" title="Delete" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-plus"></span> Update</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>XX</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#" title="Delete" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-trash"></span> Delete</a>
+                            <a href="#" title="Delete" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-plus"></span> Update</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>XX</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#" title="Delete" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-trash"></span> Delete</a>
+                            <a href="#" title="Delete" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-plus"></span> Update</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>XX</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#" title="Delete" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-trash"></span> Delete</a>
+                            <a href="#" title="Delete" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-plus"></span> Update</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>XX</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#" title="Delete" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-trash"></span> Delete</a>
+                            <a href="#" title="Delete" class="grid-topTxt-download"><span class="action-icon glyphicon glyphicon-plus"></span> Update</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- pagination start-->
+        <div class=" row rowMargin pagination">
+            <div class="col-md-6 pagination-select">
+                <a href="#" class="page firstarrow"></a>
+                <a href="#" class="page previousarrow"></a>
+                <span class="page active">10</span>
+                <a href="#" class="page nextarrow"></a>
+                <a href="#" class="page lastarrow"></a>
+                <select class="pagination-list">
+                    <option value="">10</option>
+                    <option value="">25</option>
+                    <option value="">50</option>
+                    <option value="">75</option>
+                    <option value="">All records</option>
+                </select>
+                <div class="paginationdd">
+                    <label>Items per page</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <span class="pagination-items">1-10 of 200 items</span>
+            </div>
+        </div>
+        <!--pagination end-->
+    </div>
+</div>	
+

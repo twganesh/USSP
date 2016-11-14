@@ -1,0 +1,60 @@
+﻿@{
+    //Layout = "~/Views/Shared/_layout.cshtml";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Open TMS Shipments</title>
+    @Styles.Render("~/Content/kendo/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/kendo")
+
+    </head>
+<body>
+    <div>
+        @(Html.Kendo()
+                            .Grid<USSP.Models.DTO.DTOOpenTMSShipments>()
+                            .Columns(cols =>
+                            {
+                                cols.Bound(c => c.Id);
+                                cols.Bound(c => c.stopId);
+                                cols.Bound(c => c.District);
+                                cols.Bound(c => c.Source);
+                                cols.Bound(c => c.Destination);
+                                cols.Bound(c => c.CreatedBy);
+                            
+                            }
+                            )
+                            .Name("OpenTMSShipmentsGrid")
+                            .Navigatable()
+                            .Pageable(i => i.Refresh(true).PageSizes(true))
+                            .Sortable()
+                            .Selectable()
+                            .Filterable()
+                            .Scrollable(scrolling => scrolling.Enabled(true))
+                            .Resizable(r => r.Columns(true))
+                            .Reorderable(reorder => reorder.Columns(true))
+                           .EnableCustomBinding(true)
+                            .DataSource(dataSource => dataSource
+                            .Ajax()
+                            .PageSize(10)
+                            .Read(                                  
+                                     read => read.Action("ReadList", "OpenTMSShipments")
+                                )
+                            )
+
+        )
+
+
+
+    </div>
+</body>
+</html>
+
+
+
+

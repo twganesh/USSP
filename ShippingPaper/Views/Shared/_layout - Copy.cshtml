@@ -1,0 +1,66 @@
+﻿@using System.Web.Optimization
+@using Kendo.Mvc.UI;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Layoutpage</title>
+
+    @Styles.Render("~/Content/kendo/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/kendo")
+
+    <script>
+    $(document).ready(function() {
+        var myWindow = $("#messageWindow");
+        
+
+        //$("#open").click( function (e) {
+        //    myWindow.data("kendoWindow").open();
+        //});
+
+        //$("#close").click( function (e) {
+        //    myWindow.data("kendoWindow").close();
+        //});
+
+        //$("#refresh").click( function (e) {
+        //    myWindow.data("kendoWindow").refresh();
+        //});
+
+        $("#center").click( function (e) {
+            myWindow.data("kendoWindow").center();
+        });
+
+        //$("#pin").click( function (e) {
+        //    myWindow.data("kendoWindow").pin();
+        //});
+
+        //$("#unpin").click( function (e) {
+        //    myWindow.data("kendoWindow").unpin();
+        //});
+    });
+    </script>
+
+
+
+
+</head>
+<body>
+    @(Html.Kendo().Window()
+        .Name("messageWindow")
+        .Width(630)
+        .Height(315)
+        .Draggable()
+        .Resizable()
+        .Title("Pop Window")
+        .Actions(actions => actions.Pin().Refresh().Maximize().Close())
+       // .LoadContentFrom("Message", "Index")
+       .LoadContentFrom("Message/Index")
+
+)
+
+    @RenderBody();
+</body>
+</html>

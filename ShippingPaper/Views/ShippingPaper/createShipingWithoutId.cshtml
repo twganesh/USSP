@@ -1,0 +1,440 @@
+﻿
+@{
+    ViewBag.Title = "createShipingWithoutId";
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<div class="row rowMargin searchLabelRow">
+    <div class="col-md-4">
+        <div class=""><span class="searchLabel">Create Shipping Paper</span></div>
+    </div>
+    <div class="col-md-4" align="center">
+        <div class=""><span class="time-out-label">Timeout after <span class="timeLimit">XX:XX</span> min of inactivity</span></div>
+    </div>
+    <div class="col-md-4">
+        <div class="pull-right"><span class="mandatory-field-label"><span class="mandatory">*</span>Mandatory field</span></div>
+    </div>
+</div>
+<div class="row rowMargin rowBorder">
+    <div class="row rowMargin header-row">
+        <div class="col-md-6">
+            <span class="txtlabel">Header Details</span>
+        </div>
+        <div class="col-md-6">
+            <span class="mandatory-field-label pull-right">For urgent matters after business hours call (817) 233-0535</span>
+        </div>
+    </div>
+    <div class="row rowMargin row-margin-top">
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Well Site <span class="mandatory">*</span></span></div>
+                <div class=""><input class="form-control inputHeightWidth" id="" name="" type="text"></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">District</span></div>
+                <div class="">
+                    <select class="form-control inputHeightWidth" id="" name="">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Operator / Driver</span></div>
+                <div class=""><input class="form-control inputHeightWidth" id="" name="" type="text"></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Shipped Date</span></div>
+                <div class="inner-addon right-addon display-inline-div">
+                    <input class="form-control inputHeightWidth datepicker" id="" name="" type="text">
+                    <i class="glyphicon glyphicon-calendar"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row rowMargin">
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Treatment No.</span></div>
+                <div class=""><input class="form-control inputHeightWidth" id="" name="" type="text"></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Truck No. <span class="mandatory">*</span></span></div>
+                <div class=""><input class="form-control inputHeightWidth" id="" name="" type="text"></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Trailer No.</span></div>
+                <div class=""><input class="form-control inputHeightWidth" id="" name="" type="text"></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Customer</span></div>
+                <div class=""><input class="form-control inputHeightWidth" id="" name="" type="text"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row rowMargin">
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Job Location</span></div>
+                <div class="">
+                    <select class="form-control inputHeightWidth" id="" name="">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Well / Job Name</span></div>
+                <div class=""><input class="form-control inputHeightWidth" id="" name="" type="text"></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Colorado Well</span></div>
+                <div class="">
+                    <label class="radio-inline txtlabel"><input type="radio" name="optradio">Yes</label>
+                    <label class="radio-inline txtlabel"><input type="radio" name="optradio">No</label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Radioactive</span></div>
+                <div class="">
+                    <label class="radio-inline txtlabel"><input type="radio" name="optradio">Yes</label>
+                    <label class="radio-inline txtlabel"><input type="radio" name="optradio">No</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row rowMargin row-margin-bottom">
+        <div class="col-md-6">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Special Instructions</span></div>
+                <div class=""><textarea class="form-control inputHeightWidth" id="" name="" rows="4"></textarea></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+        </div>
+    </div>
+</div>
+<div class="row rowMargin">
+    <div class="col-md-12 tablePadding">
+        <div class="row rowMargin search-heading header-row">
+            <div class="col-md-6">
+                <b>DOT Shipping Description (<span class="mandatory">Note</span> -Please select category first.)</b>
+            </div>
+            <div class="col-md-6">
+                <a href="#" class="grid-topTxt-delete">Delete</a>
+                <a href="#" class="grid-topTxt-download">Add</a>
+            </div>
+        </div>
+        <div class="row rowMargin">
+            <div class="col-md-12 tablePadding">
+                <table class="t01">
+                    <tr>
+                        <th>#</th>
+                        <th>Category</th>
+                        <th>Shipping Id.</th>
+                        <th>Package Type</th>
+                        <th>Location</th>
+                        <th>Actual Quantity per Package</th>
+                        <th>No. of Packages</th>
+                        <th>Download SDS</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="category-td">
+                            <select class="form-control inputHeightWidth" id="" name="">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#" title="Delete"><span class="action-icon glyphicon glyphicon-trash"></span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="category-td">
+                            <select class="form-control inputHeightWidth" id="" name="">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#" title="Delete"><span class="action-icon glyphicon glyphicon-trash"></span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="category-td">
+                            <select class="form-control inputHeightWidth" id="" name="">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#" title="Delete"><span class="action-icon glyphicon glyphicon-trash"></span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="category-td">
+                            <select class="form-control inputHeightWidth" id="" name="">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#" title="Delete"><span class="action-icon glyphicon glyphicon-trash"></span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td class="category-td">
+                            <select class="form-control inputHeightWidth" id="" name="">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#" title="Delete"><span class="action-icon glyphicon glyphicon-trash"></span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td class="category-td">
+                            <select class="form-control inputHeightWidth" id="" name="">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#" title="Delete"><span class="action-icon glyphicon glyphicon-trash"></span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td class="category-td">
+                            <select class="form-control inputHeightWidth" id="" name="">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#" title="Delete"><span class="action-icon glyphicon glyphicon-trash"></span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td class="category-td">
+                            <select class="form-control inputHeightWidth" id="" name="">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#" title="Delete"><span class="action-icon glyphicon glyphicon-trash"></span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td class="category-td">
+                            <select class="form-control inputHeightWidth" id="" name="">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#" title="Delete"><span class="action-icon glyphicon glyphicon-trash"></span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td class="category-td">
+                            <select class="form-control inputHeightWidth" id="" name="">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#" title="Delete"><span class="action-icon glyphicon glyphicon-trash"></span></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row rowMargin rowBorder row-margin-top">
+    <div class="row rowMargin header-row">
+        <div class="col-md-6">
+            <span class="txtlabel">Shipping Paper Details</span>
+        </div>
+        <div class="col-md-6">
+        </div>
+    </div>
+    <div class="row rowMargin row-margin-top">
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Load Time Zone</span></div>
+                <div class="">
+                    <select class="form-control inputHeightWidth" id="" name="">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Return Load Date</span></div>
+                <div class="inner-addon right-addon">
+                    <input class="form-control inputHeightWidth datepicker" id="" name="" type="text">
+                    <i class="glyphicon glyphicon-calendar"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Job Supervisor</span></div>
+                <div class=""><input class="form-control inputHeightWidth" id="" name="" type="text"></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Return Load Operator</span></div>
+                <div class=""><input class="form-control inputHeightWidth" id="" name="" type="text"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row rowMargin row-margin-bottom">
+        <div class="col-md-6">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Special Safety Equipment Required</span></div>
+                <div class=""><textarea class="form-control inputHeightWidth" id="" name="" type="text" rows="4"></textarea></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Certified By</span></div>
+                <div class=""><span class="txtlabel">Firstname Lastname</span></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Load Date and Time</span></div>
+                <div class=""><span class="txtlabel">09/28/2016 05:17 AM</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row rowMargin row-margin-top row-margin-bottom">
+    <div class="col-md-12" align="center">
+        <button type="button" class="btn btn-primary btn-sm btn-submit">Create</button>
+        <button type="button" class="btn btn-default btn-sm btn-reset">Reset</button>
+        <button type="button" class="btn btn-default btn-sm btn-reset">Cancel</button>
+    </div>
+</div>

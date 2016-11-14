@@ -1,0 +1,93 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>US Shipping Paper</title>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryUI")
+    @Scripts.Render("~/bundles/angularjs")
+    @Scripts.Render("~/bundles/datepickerjs")
+
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/stylecss")
+    @Styles.Render("~/Content/jqueryui")
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container main-header">
+                <div class="logo-section row rowMargin">
+                    <div class="col-md-3"><a href="#" class="ussp-logo" alt="USSP"></a> </div>
+                    <div class="col-md-3">
+                        <div class="txtlabel">Firstname Lastname</div>
+                        <div class="txtlabel">(User Role)</div>
+                    </div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3"><a href="#" class="slb-logo" alt="schlumberger"></a></div>
+                </div>
+                <div class="clear"></div>
+                <div class="navbar-strip row rowMargin">
+                    <nav class="menu-items col-md-9">
+                        <ul>
+                            <li><a href="home.html" target="_blank" class="rightborder">Home</a></li>
+                            <li><a data-toggle="modal" href="#ask-shipment-id" class="rightborder">Create Shipping Paper</a></li>
+                            <li><a href="openTmsShipment.html" target="_blank" class="rightborder">Open TMS Shipments</a></li>
+                            <li>
+                                <a href="#" target="_blank" class="rightborder">Administration <span class="glyphicon glyphicon-menu-down"></span></a>
+                                <ul>
+                                    <li class="dir"><a href="@Url.Action("Index","AdminMessages")" target="_blank">Messages</a></li>
+                                    <li class="dir"><a href="@Url.Action("Index","PickUpList")" target="_blank">Pick-lists</a></li>
+                                    <li class="dir"><a href="@Url.Action("Index","AdminUsers")" target="_blank">Users</a></li>
+                                    <li class="dir">
+                                        <a href="#" target="_blank">Radiation <span class="glyphicon glyphicon-menu-right pull-right"></a>
+                                        <ul>
+                                            <li class="dir"><a href="searchRediationConfig.html" target="_blank">Configuration</a></li>
+                                            <li class="dir"><a href="searchRediationModel.html" target="_blank">Models</a></li>
+                                            <li class="dir"><a href="searchRadiationLabel.html" target="_blank">Labels</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dir"><a href="searchTCBlend.html" target="_blank">TC Blends</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="searchReports.html" target="_blank" class="rightborder">Reports</a></li>
+                            <li>
+                                <a href="#" target="_blank" class="rightborder">Information & Feedback <span class="glyphicon glyphicon-menu-down"></span></a>
+                                <ul>
+                                    <li class="dir"><a href="#" target="_blank">DOT Special Permits</a></li>
+                                    <li class="dir"><a href="#" target="_blank">WS SDS / Labels (Field Blends & Products)</a></li>
+                                    <li class="dir"><a href="#" target="_blank">Download Hazardous Materials Load & Segregation Chart</a></li>
+                                    <li class="dir"><a href="feedBack.html" target="_blank">Feedback</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="menu-items col-md-3">
+                        <ul class="pull-right">
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!--middle section start-->
+        <div class="container-fluid row-margin-bottom" style="min-height:540px">
+            @RenderBody()
+        </div>
+        <!--middle section end-->
+        <footer>
+            <div class="footer-wrapper container row rowMargin">
+                <div class="copyright-sec col-md-6">
+                    <div class="copyright">&copy; 2016 Schlumberger Limited. All rights reserved.</div>
+                </div>
+                <div class="footer-link col-md-6">
+                    <a class="link" href="#">US Shipping Release 2.3</a>
+                    <a class="link" href="#">Terms of Service</a>
+                    <a class="link" href="#">Privacy Statement</a>
+                </div>
+            </div>
+        </footer>        
+    </div>
+</body>
+</html>

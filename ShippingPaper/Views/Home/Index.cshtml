@@ -1,0 +1,340 @@
+﻿@using Newtonsoft.Json
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<div ng-app="searchShipPaper" ng-controller="ShippingPaperController">
+    <span ng-if="loading">Loading ....Please wait</span>
+    <div class="row rowMargin searchLabelRow">
+        <div class="col-md-4">
+            <div class=""><span class="searchLabel">Search Shipping Papers</span></div>
+        </div>
+        <div class="col-md-4" align="center">
+            <div class=""><span class="time-out-label">Timeout after <span class="timeLimit">XX:XX</span> min of inactivity</span></div>
+        </div>
+        <div class="col-md-4">
+            <div class="pull-right"><span class="mandatory-field-label"><span class="mandatory">*</span>Mandatory field</span></div>
+        </div>
+    </div>
+    <div class="row rowMargin rowBorder rowPaddingbottom">
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel"><span class="mandatory">*</span> Id.</span></div>
+                <div class=""><input class="form-control inputHeightWidth" id="" name="" type="text" ng-model="Filters.Id"></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Shipment Id.</span></div>
+                <div class=""><input class="form-control inputHeightWidth" id="" name="" type="text" ng-model="Filters.ShipmentId"></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Product Code</span></div>
+                <div class=""><input class="form-control inputHeightWidth" id="" name="" type="text" ng-model="Filters.ProductCode"></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group inputMarginbottom">
+                <div class=""><span class="txtlabel">Created By</span></div>
+                <div class="">
+                    <select class="form-control inputHeightWidth" ng-model="Filters.CreatedBy" ng-options="item.Name as item.Name for item in CreatedByOptions"></select>
+                </div>
+            </div>
+        </div>
+        <div id="demo" class="collapse">
+            <div class="row rowMargin">
+                <div class="col-md-3">
+                    <div class="form-group inputMarginbottom">
+                        <div class=""><span class="txtlabel">Customer</span></div>
+                        <div class=""><input class="form-control inputHeightWidth" id="" name="" type="text" ng-model="Filters.Customer"></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group inputMarginbottom">
+                        <div class=""><span class="txtlabel">Well Site</span></div>
+                        <div class="">
+                            <select class="form-control inputHeightWidth" id="" name="" ng-model="Filters.WellSite" ng-options="item for item in WellSiteOptions"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group inputMarginbottom">
+                        <div class=""><span class="txtlabel">Operator / Driver</span></div>
+                        <div class=""><input class="form-control inputHeightWidth" id="" name="" type="text" ng-model="Filters.Operator"></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group inputMarginbottom">
+                        <div class=""><span class="txtlabel">Job Location</span></div>
+                        <div class=""><input class="form-control inputHeightWidth" id="" name="" type="text" ng-model="Filters.JobLocation"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row rowMargin">
+                <div class="col-md-3">
+                    <div class="form-group inputMarginbottom">
+                        <div class=""><span class="txtlabel">District</span></div>
+                        <div class="">
+                            <select class="form-control inputHeightWidth" id="" name="" ng-model="Filters.District" ng-options="item for item in DistrictOptions"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group inputMarginbottom">
+                        <div class=""><span class="txtlabel">Truck No.</span></div>
+                        <div class=""><input class="form-control inputHeightWidth" id="" name="" type="text" ng-model="Filters.TruckNo"></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group inputMarginbottom">
+                        <div class=""><span class="txtlabel">Trailer No.</span></div>
+                        <div class=""><input class="form-control inputHeightWidth" id="" name="" type="text" ng-model="Filters.TrailerNo"></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group inputMarginbottom">
+                        <div class=""><span class="txtlabel">Well Job Name</span></div>
+                        <div class=""><input class="form-control inputHeightWidth" id="" name="" type="text" ng-model="Filters.WellJobName"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row rowMargin">
+                <div class="col-md-3">
+                    <div class="form-group inputMarginbottom">
+                        <div class=""><span class="txtlabel">Treatment No.</span></div>
+                        <div class=""><input class="form-control inputHeightWidth" id="" name="" type="text" ng-model="Filters.TreatmentNo"></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group inputMarginbottom">
+                        <div class=""><span class="txtlabel">Radioactive</span></div>
+                        <div class="">
+                            <label class="radio-inline radio-margin txt-simple"><input type="radio" name="optradio">Yes</label>
+                            <label class="radio-inline radio-margin txt-simple"><input type="radio" name="optradio">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group inputMarginbottom">
+                                <div class=""><span class="txtlabel">Shipped Date</span></div>
+                                <div class="display-inline-div">
+                                    <select class="form-control inputHeightWidth" id="" name="" ng-model="Filters.ShipDateFilterType" ng-options="item for item in FilterTypesOptions"></select>
+                                </div>
+                                <div class="inner-addon right-addon display-inline-div">
+                                    <input class="form-control inputHeightWidth datepicker" id="" name="" type="text" ng-model="Filters.ShipDateBetweenFrom">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </div>
+                                <span class="txtlabel display-inline-label">and</span>
+                                <div class="inner-addon right-addon display-inline-div">
+                                    <input class="form-control inputHeightWidth datepicker" id="" name="" type="text" ng-model="Filters.ShipDateBetweenTo">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row rowMargin">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group inputMarginbottom">
+                                <div class=""><span class="txtlabel">Created Date</span></div>
+                                <div class="display-inline-div">
+                                    <select class="form-control inputHeightWidth" id="" name="" ng-model="Filters.CreateDateFilterType" ng-options="item for item in FilterTypesOptions"></select>
+                                </div>
+                                <div class="inner-addon right-addon display-inline-div">
+                                    <input class="form-control inputHeightWidth datepicker" id="" name="" type="text" ng-model="Filters.CreateDateBetweenFrom">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </div>
+                                <span class="txtlabel display-inline-label">and</span>
+                                <div class="inner-addon right-addon display-inline-div">
+                                    <input class="form-control inputHeightWidth datepicker" id="" name="" type="text" ng-model="Filters.CreateDateBetweenTo">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group inputMarginbottom">
+                                <div class=""><span class="txtlabel">Updated Date</span></div>
+                                <div class="display-inline-div">
+                                    <select class="form-control inputHeightWidth" id="" name="" ng-model="Filters.UpdateDateFilterType" ng-options="item for item in FilterTypesOptions"></select>
+                                </div>
+                                <div class="inner-addon right-addon display-inline-div">
+                                    <input class="form-control inputHeightWidth datepicker" id="" name="" type="text" ng-model="Filters.UpdateDateBetweenFrom">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </div>
+                                <span class="txtlabel display-inline-label">and</span>
+                                <div class="inner-addon right-addon display-inline-div">
+                                    <input class="form-control inputHeightWidth datepicker" id="" name="" type="text" ng-model="Filters.UpdateDateBetweenTo">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row rowMargin rowMargingTop">
+        <div class="col-md-12">
+            <button type="button" class="btn btn-info btn-sm btnSearch pull-right" data-toggle="collapse" data-target="#demo">
+                Advanced search&nbsp;<span class="glyphicon glyphicon-triangle-bottom"></span>
+            </button>
+        </div>
+    </div>
+    <div class="row rowMargin row-margin-top">
+        <div class="col-md-12" align="center">
+            <button type="button" class="btn btn-primary btn-sm btn-submit" ng-click="search()">Search</button>
+            <button type="button" class="btn btn-primary btn-sm btnViewAll btn-submit">View All Shipping Paper</button>
+            <button type="button" class="btn btn-default btn-sm btn-reset">Reset</button>
+        </div>
+    </div>
+    <div class="row rowMargin">
+        <div class="col-md-12 tablePadding">
+            <div class="row rowMargin search-heading header-row">
+                <div class="col-md-6">
+                    <b>Search Result</b>
+                </div>
+                <div class="col-md-6">
+                    <a href="#" class="grid-topTxt-delete">Delete</a>
+                    <a href="#" class="grid-topTxt-download">Archive</a>
+                </div>
+            </div>
+            <div class="row rowMargin">
+                <div class="col-md-12 tablePadding">
+                    <table class="t01">
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>Id.</th>
+                            <th>Shipping Id.</th>
+                            <th>Stop No.</th>
+                            <th>Origin</th>
+                            <th>Destination</th>
+                            <th>District</th>
+                            <th>CreatedBy</th>
+                            <th>Created Date</th>
+                            <th>Actions</th>
+                        </tr>
+                        <tr ng-repeat="ship in ShippingPapers">
+                            <td><input type="checkbox"></td>
+                            <td ng-bind="ship.Id"></td>
+                            <td ng-bind="ship.ShipmentId"></td>
+                            <td ng-bind="ship.StopNo"></td>
+                            <td ng-bind="ship.Origin"></td>
+                            <td ng-bind="ship.Destination"></td>
+                            <td ng-bind="ship.District"></td>
+                            <td ng-bind="ship.CreatedBy"></td>
+                            <td ng-bind="ship.CreateDate"></td>
+                            <td>
+                                <a href="#" title="Edit" class="action-icon"><span class="glyphicon glyphicon-edit"></span></a>
+                                <a href="#" title="Copy" class="action-icon"><span class="glyphicon glyphicon-file"></span></a>
+                                <a href="#" title="Delete" class="action-icon"><span class="glyphicon glyphicon-trash"></span></a>
+                                <a href="#" title="View" class="action-icon"><span class="glyphicon glyphicon-search"></span></a>
+                                <a href="#" title="Pdf" class="action-icon"><span class="glyphicon glyphicon-book"></span></a>
+                                <a href="#" title="Download SDS" class="action-icon"><span class="glyphicon glyphicon-download-alt"></span></a>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+            <!-- pagination start-->
+            <div class=" row rowMargin pagination">
+                <div class="col-md-6 pagination-select">
+                    <a href="#" class="page firstarrow"></a>
+                    <a href="#" class="page previousarrow"></a>
+                    <span class="page active">{{GridOptions.CurrentPage}}</span>
+                    <a href="#" class="page nextarrow"></a>
+                    <a href="#" class="page lastarrow"></a>
+                    <select class="pagination-list" ng-model="GridOptions.PageSize">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="75">75</option>
+                        <option value="0">All records</option>
+                    </select>
+                    <div class="paginationdd">
+                        <label>Items per page</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <span class="pagination-items" ng-bind="PagingView">
+                                                
+                    </span>
+                </div>
+            </div>
+            <!--pagination end-->
+        </div>
+    </div>
+    <input type="text" ng-model="GridOptions.SortDirection" placeholder="SortDirection" />
+    <input type="text" ng-model="GridOptions.SortBy" placeholder="SortBy" />
+    <input type="text" ng-model="GridOptions.CurrentPage" placeholder="CurrentPage" />
+    <pre>{{GridOptions | json}}</pre>
+</div>
+<!-- Confirm TFS Shipment ID Start-->
+<div class="modal fade modal-box" id="ask-shipment-id" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body" style="align:center">
+                <p>Do you have TMS Shipment Id. ?</p>
+            </div>
+            <div class="modal-footer">
+                <a href="@Url.Action("createShipingWithId","ShippingPaper")" target="_blank" class="btn btn-default button-style btn-sm">Yes</a>
+                <a href="@Url.Action("createShipingWithoutId","ShippingPaper")" target="_blank" class="btn btn-default button-style btn-sm">No</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Confirm TFS Shipment ID End-->
+<script type="text/javascript">
+    var app = angular.module('searchShipPaper', []);
+
+    app.controller('ShippingPaperController', ['$scope', '$http', shippingPaperController]);
+
+    function shippingPaperController($scope, $http) {
+        $scope.Filters = {
+            Id: "", ShipmentId: "", ProductCode: "", CreatedBy: "", Customer: "", WellSite: "", Operator: "",
+            JobLocation: "", District: "", TruckNo: "", TrailerNo: "", WellJobName: "", TreatmentNo: "", IsRadioActive: "",
+            ShipDateFilterType: "", ShipDateBetweenFrom: "", ShipDateBetweenTo: "",
+            UpdateDateFilterType: "", UpdateDateBetweenFrom: "", UpdateDateBetweenTo: "",
+            CreateDateFilterType: "", CreateDateBetweenFrom: "", CreateDateBetweenTo: "",
+            TrailerNo: "", WellJobName: "", TreatmentNo: "", IsRadioActive: ""
+        };
+        $scope.GridOptions = { PageSize : 25, CurrentPage : 1, TotalPages : 1, SortDirection : "Ascending", SortBy: "Id"};
+        $scope.CreatedByOptions = @Html.Raw(JsonConvert.SerializeObject(ViewBag.CreatedByOptions));
+        $scope.WellSiteOptions = @Html.Raw(JsonConvert.SerializeObject(ViewBag.WellSiteOptions));
+        $scope.DistrictOptions = @Html.Raw(JsonConvert.SerializeObject(ViewBag.DistrictOptions));
+        $scope.FilterTypesOptions = @Html.Raw(JsonConvert.SerializeObject(ViewBag.FilterTypesOptions));
+        $scope.PagingView = "";
+        $scope.ShippingPapers = [];
+        $scope.loading = true;
+        $scope.search = function () {
+            var data = {filters : $scope.Filters, gridOptions: $scope.GridOptions};
+            data.CreatedByOptions = [];
+            $http.post('/ShippingPaper/Search',data)
+                .success(function (data) {
+                    $scope.ShippingPapers = data.Data.Data;
+                    $scope.GridOptions = { CurrentPage : data.Data.CurrentPage, PageSize : data.Data.PageSize, TotalPages : data.Data.TotalPages, SortDirection : data.Data.SortDirection, SortBy: data.Data.SortBy};
+                    $scope.PagingView = (($scope.GridOptions.PageSize*$scope.GridOptions.CurrentPage)-($scope.GridOptions.PageSize-1)) +" - " +($scope.GridOptions.PageSize*$scope.GridOptions.CurrentPage)+" of 200 items";
+                    $scope.loading = false;
+                })
+           .error(function () {
+               $scope.error = "An Error has occured while loading posts!";
+               $scope.loading = false;
+           });
+        };
+    }
+</script>
