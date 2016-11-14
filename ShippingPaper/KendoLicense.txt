@@ -5,6 +5,7 @@ Download MSI File from
 JS : 
 https://www.telerik.com/account/product-download?product=KENDOUIMVC
 
+Test
 
 
 The request channel timed out while waiting for a reply after 00:00:59.4549455. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
