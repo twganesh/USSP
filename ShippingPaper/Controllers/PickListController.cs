@@ -1,11 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using USSP.Service;
-using USSP.Models.CORE;
+using SLB.USSP.Service;
 
-
-namespace USSP.Controllers
+namespace SLB.USSP.Web.Controllers
 {
     public class PickListViewModel
     {

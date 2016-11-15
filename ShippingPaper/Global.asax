@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="ShippingPaper.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="SLB.USSP.Web.Global" Language="C#" %>

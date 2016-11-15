@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using USSP.Models.DTO;
+﻿using System.Collections.Generic;
+using SLB.USSP.Core.DTO;
 
-namespace USSP.Service
+namespace SLB.USSP.Service
 {
-   public interface ITMSShipmentProvider
+    public interface ITMSShipmentProvider
     {
         List<DTOOpenTMSShipments> getOpenTMSShipments(string TMSShipmentId);
 

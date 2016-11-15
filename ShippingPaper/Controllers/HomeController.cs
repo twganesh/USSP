@@ -1,12 +1,12 @@
-﻿using Service;
-using ShippingPaper.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using SLB.USSP.Service;
 
-namespace ShippingPaper.Controllers
+namespace SLB.USSP.Web.Controllers
 {
     public class HomeController : Controller
     {

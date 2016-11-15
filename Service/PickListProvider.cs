@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using USSP.Repository;
-using USSP.Models.CORE;
+using SLB.USSP.Repository;
+using SLB.USSP.Core.Models;
 
-namespace USSP.Service
+namespace SLB.USSP.Service
 {
 
     public class PickListProvider : IPickListProvider

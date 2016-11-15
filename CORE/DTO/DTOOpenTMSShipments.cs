@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
-namespace USSP.Models.DTO
+
+namespace SLB.USSP.Core.DTO
 {
 
     

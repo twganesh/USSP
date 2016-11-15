@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShippingPaper", "ShippingPaper\ShippingPaper.csproj", "{1AA39AB7-A002-49AE-8C99-FAC2333FDBCC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLB.USSP.Web", "ShippingPaper\SLB.USSP.Web.csproj", "{1AA39AB7-A002-49AE-8C99-FAC2333FDBCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{F5167924-7E5E-43CA-8C20-784515A28DF5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLB.USSP.Repository", "Repository\SLB.USSP.Repository.csproj", "{F5167924-7E5E-43CA-8C20-784515A28DF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CORE", "CORE\CORE.csproj", "{4AC7EF94-448C-4973-BDED-59AB05301DCB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLB.USSP.Core", "CORE\SLB.USSP.Core.csproj", "{4AC7EF94-448C-4973-BDED-59AB05301DCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{EF6F3DFD-3568-4832-B01C-C6DF33C41D51}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLB.USSP.Service", "Service\SLB.USSP.Service.csproj", "{EF6F3DFD-3568-4832-B01C-C6DF33C41D51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLB.USSP.WinAuth", "SLB.USSP.WinAuth\SLB.USSP.WinAuth.csproj", "{0254DD56-B4F9-4F7E-9175-1FFB7BE69884}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{EF6F3DFD-3568-4832-B01C-C6DF33C41D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF6F3DFD-3568-4832-B01C-C6DF33C41D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF6F3DFD-3568-4832-B01C-C6DF33C41D51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0254DD56-B4F9-4F7E-9175-1FFB7BE69884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0254DD56-B4F9-4F7E-9175-1FFB7BE69884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0254DD56-B4F9-4F7E-9175-1FFB7BE69884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0254DD56-B4F9-4F7E-9175-1FFB7BE69884}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

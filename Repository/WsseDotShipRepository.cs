@@ -1,11 +1,11 @@
-﻿using CORE.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using USSP.Repository;
+using SLB.USSP.Core.Models;
 
-namespace Repository
+namespace SLB.USSP.Repository
 {
     public class WsseDotShipRepository : RepositoryBase<WsseDotShip>, IWsseDotShipRepository
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace ShippingPaper.Controllers
+namespace SLB.USSP.Web.Controllers
 {
     public class AdminMessagesController : Controller
     {

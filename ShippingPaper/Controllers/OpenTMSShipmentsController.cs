@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Web.Mvc;
-using USSP.Service;
-using USSP.Models.DTO;
-using System.Collections.Generic;
 
-namespace ShippingPaper.Controllers
+using System.Collections.Generic;
+using SLB.USSP.Service;
+
+namespace SLB.USSP.Web.Controllers
 {
     public class OpenTMSShipmentsController : Controller
     {

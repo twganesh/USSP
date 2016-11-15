@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace ShippingPaper.Controllers
+namespace SLB.USSP.Web.Controllers
 {
     public abstract class USSPController : Controller
     {

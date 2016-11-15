@@ -1,0 +1,849 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Slb.Central.Component.ActiveDirectory</name>
+    </assembly>
+    <members>
+        <member name="T:Slb.Central.Component.ActiveDirectory.UtilityConstants">
+            <summary>
+            This class holds the constants which will be used across.
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.DISPLAYNAME">
+            <summary>
+            Display Name
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.GIVENNAME">
+            <summary>
+            First Name 
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.SN">
+            <summary>
+            Last Name
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.NAME">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.SAMACCOUNTNAME">
+            <summary>
+            UserId/LdapId
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.MAIL">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.DEPARTMENT">
+            <summary>
+            Department
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.MEMBEROF">
+            <summary>
+            Member Of
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.L">
+            <summary>
+            City
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.CO">
+            <summary>
+            Country
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.LASTLOGON">
+            <summary>
+            Last LogOn
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.USERPRINCIPALNAME">
+            <summary>
+            Login Name 
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.EMPLOYEENUMBER">
+            <summary>
+            Employee Number(GIN)
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.EMPLOYEETYPE">
+            <summary>
+            Employee Type
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.DISTINGUISHEDNAME">
+            <summary>
+            Distinguished Name
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.UIDNUMBER">
+            <summary>
+            UidNumber
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.TITLE">
+            <summary>
+            Title
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.CN">
+            <summary>
+            CN
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.SECURITYSTATUS">
+            <summary>
+            Security Status
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.AUTHRESULT">
+            <summary>
+            Auth Result
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.ZEROROWCOUNT">
+            <summary>
+            Zero row count.
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.ZEROINDEX">
+            <summary>
+            Zero row index
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.DEFAULTSIZELIMIT">
+            <summary>
+            Default size limit.
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.PAGESIZE">
+            <summary>
+            Page Size, defualt it's 1000
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.LDAPROOTDSE">
+            <summary>
+            Ldap root dse.
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.DEFAULTNAMINGCONTEXT">
+            <summary>
+            DefaultNamingContext
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.LDAP">
+            <summary>
+            Ldap
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.USERATTRIBUTES">
+            <summary>
+            User attributes
+            The comma seperated list of attributes which needs to be fetched from active directory.
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.LOGINIDFILTER">
+            <summary>
+            Login Id filter
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.NAMEFILTER">
+            <summary>
+            Name Filter
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.EMAILFILTER">
+            <summary>
+            Email Filter
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.GINFILTER">
+            <summary>
+            GIN Filter
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.ALLUSERS">
+            <summary>
+            All Users Filter
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.ALLINACTIVEUSERS">
+            <summary>
+            All Inactive Users Filter
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.ALLACTIVEUSERS">
+            <summary>
+            All Active Users Filter
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.DEFAULTSORTCOLUMN">
+            <summary>
+            The default sort column will be an 'uidnumber'
+            'uidnumber' an integer value that uniquely identifies a user in an administrative domain.
+            </summary>
+        </member>
+        <member name="F:Slb.Central.Component.ActiveDirectory.UtilityConstants.DEFAULTSORTDIRECTION">
+            <summary>
+            The default sort direction will be an 'Ascending'
+            </summary>
+        </member>
+        <member name="T:Slb.Central.Component.ActiveDirectory.BaseImplementation">
+            <summary>
+            This class will clean up the resources through IDisposable
+            </summary>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.BaseImplementation.Dispose">
+            <summary>
+            Public implementation of Dispose pattern callable by consumers.
+            </summary>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.BaseImplementation.Dispose(System.Boolean)">
+            <summary>
+            Protected implementation of Dispose pattern.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="T:Slb.Central.Component.ActiveDirectory.Searcher">
+            <summary>
+            This class hold methods to search for user's in active directory.
+            </summary>
+        </member>
+        <member name="T:Slb.Central.Component.ActiveDirectory.ISearcher">
+            <summary>
+            Holds the active directory users search methods.
+            </summary>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.ISearcher.SearchByEmail(System.String)">
+            <summary>
+            Search active directory user by email id.
+            </summary>
+            <param name="emailId">EailId</param>
+            <returns>User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.ISearcher.SearchByLoginId(System.String)">
+            <summary>
+            Search active directory user by Login Id(LDAP Id).
+            </summary>
+            <param name="loginId">Login Id(LDAP Id)</param>
+            <returns>User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.ISearcher.SearchByGin(System.String)">
+            <summary>
+            Search active directory user by GIN.
+            </summary>
+            <param name="gin">GIN Number</param>
+            <returns>User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.ISearcher.SearchByName(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Search active directory user(s) by name.
+            To retrieve a set of results that is larger than 1000 items, PageSize set to a value that is less than or equal to 1000. 
+            The paging occurs transparently to the application and the application does not have to perform any special processing other than setting the PageSize property to the proper value.
+            https://msdn.microsoft.com/en-us/library/ms180880(v=vs.80).aspx
+            </summary>
+            <param name="name">Name to search</param>
+            <param name="pageSize">The PageSize property sets the maximum number of items in each page of results that will be returned by a search</param>
+            <param name="sortExpression">Sort (column)expression</param>
+            <param name="sortDirection">Sort Order (Ascending/Descending), Default will be Ascending. </param>
+            <returns>List of User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.ISearcher.SearchByName(System.String,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Search active directory user(s) by name, for effective paging use precise filter criteria instead of generic.
+            This will be a paged search, client applications can provide the input params like rowIndex and records which needs to displayed per page.
+            The records will be default sorted by column 'uidnumber' an integer value that uniquely identifies a user in an administrative domain and default sort order will be 'Ascending'.
+            Note - This code works for searches returning up to 10,000 records at which point the LDAP Policy MaxTempTableSize is enforced and the search will return with an error.
+            </summary>
+            <param name="name">input name to search</param>
+            <param name="rowIndex">Start row index, for first row it will be 0, second row it will 1 likewise.</param>
+            <param name="recordsPerPage">Records to be shown per page</param>
+            <param name="sortExpression">Sort (column)expression</param>
+            <param name="sortDirection">Sort Order (Ascending/Descending), Default will be Ascending. </param>
+            <returns>List of active directory users.</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.ISearcher.SearchByWhenCreated(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Search active directory user(s) by creation date, This will search for users created on or after the input date. 
+            The date format needs to be YYYYMMDD.
+            To retrieve a set of results that is larger than 1000 items, PageSize set to a value that is less than or equal to 1000. 
+            The paging occurs transparently to the application and the application does not have to perform any special processing other than setting the PageSize property to the proper value.
+            https://msdn.microsoft.com/en-us/library/ms180880(v=vs.80).aspx
+            </summary>
+            <param name="createdDate">Search for users created on or after date in YYYYMMDD format</param>
+            <param name="pageSize">The PageSize property sets the maximum number of items in each page of results that will be returned by a search</param>
+            <param name="sortExpression">Sort (column)expression</param>
+            <param name="sortDirection">Sort Order (Ascending/Descending), Default will be Ascending. </param>
+            <returns>List of User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.ISearcher.SearchByWhenChanged(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Search active directory user(s) by changed date, This will search for users changed on or after the input date. 
+            The date format needs to be YYYYMMDD.
+            To retrieve a set of results that is larger than 1000 items, PageSize set to a value that is less than or equal to 1000. 
+            The paging occurs transparently to the application and the application does not have to perform any special processing other than setting the PageSize property to the proper value.
+            https://msdn.microsoft.com/en-us/library/ms180880(v=vs.80).aspx
+            </summary>
+            <param name="changedDate">Search for users changed on or after date in YYYYMMDD format</param>
+            <param name="pageSize">The PageSize property sets the maximum number of items in each page of results that will be returned by a search</param>
+            <param name="sortExpression">Sort (column)expression</param>
+            <param name="sortDirection">Sort Order (Ascending/Descending), Default will be Ascending. </param>
+            <returns>List of User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.ISearcher.SearchAllUsers(System.Int32,System.String,System.String)">
+            <summary>
+            Search all active directory users.
+            To retrieve a set of results that is larger than 1000 items, PageSize set to a value that is less than or equal to 1000. 
+            The paging occurs transparently to the application and the application does not have to perform any special processing other than setting the PageSize property to the proper value.
+            https://msdn.microsoft.com/en-us/library/ms180880(v=vs.80).aspx
+            </summary>
+            <param name="pageSize">The PageSize property sets the maximum number of items in each page of results that will be returned by a search</param>
+            <param name="sortExpression">Sort (column)expression</param>
+            <param name="sortDirection">Sort Order (Ascending/Descending), Default will be Ascending. </param>
+            <returns>List of User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.ISearcher.SearchAllActiveUsers(System.Int32,System.String,System.String)">
+            <summary>
+            Search all active users from active directory.
+            To retrieve a set of results that is larger than 1000 items, PageSize set to a value that is less than or equal to 1000. 
+            The paging occurs transparently to the application and the application does not have to perform any special processing other than setting the PageSize property to the proper value.
+            https://msdn.microsoft.com/en-us/library/ms180880(v=vs.80).aspx
+            </summary>
+            <param name="pageSize">The PageSize property sets the maximum number of items in each page of results that will be returned by a search</param>
+            <param name="sortExpression">Sort (column)expression</param>
+            <param name="sortDirection">Sort Order (Ascending/Descending), Default will be Ascending. </param>
+            <returns>List of User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.ISearcher.SearchAllInactiveUsers(System.Int32,System.String,System.String)">
+            <summary>
+            Search all Inactive users from active directory.
+            To retrieve a set of results that is larger than 1000 items, PageSize set to a value that is less than or equal to 1000. 
+            The paging occurs transparently to the application and the application does not have to perform any special processing other than setting the PageSize property to the proper value.
+            https://msdn.microsoft.com/en-us/library/ms180880(v=vs.80).aspx
+            </summary>
+            <param name="pageSize">The PageSize property sets the maximum number of items in each page of results that will be returned by a search</param>
+            <param name="sortExpression">Sort (column)expression</param>
+            <param name="sortDirection">Sort Order (Ascending/Descending), Default will be Ascending. </param>
+            <returns>List of User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Searcher.#ctor">
+            <summary>
+            Read the configuration from client's .config file.
+            </summary>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Searcher.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Parametrized Constructor.
+            </summary>
+            <param name="ldapPath">LDAP Path</param>
+            <param name="ldapAlias">LDAP Alias</param>
+            <param name="ldapPassword">LDAP Password</param>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Searcher.Slb#Central#Component#ActiveDirectory#ISearcher#SearchByEmail(System.String)">
+            <summary>
+            Search active directory user by email id.
+            </summary>
+            <param name="emailId">EmailId</param>
+            <returns>User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Searcher.Slb#Central#Component#ActiveDirectory#ISearcher#SearchByLoginId(System.String)">
+            <summary>
+            Search active directory user by Login Id(LDAP Id).
+            </summary>
+            <param name="loginId">Login Id(LDAP Id)</param>
+            <returns>User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Searcher.Slb#Central#Component#ActiveDirectory#ISearcher#SearchByGin(System.String)">
+            <summary>
+            Search active directory user by GIN.
+            </summary>
+            <param name="gin">GIN Number</param>
+            <returns>User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Searcher.Slb#Central#Component#ActiveDirectory#ISearcher#SearchByName(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Search active directory user(s) by name.
+            To retrieve a set of results that is larger than 1000 items, PageSize set to a value that is less than or equal to 1000. 
+            The paging occurs transparently to the application and the application does not have to perform any special processing other than setting the PageSize property to the proper value.
+            https://msdn.microsoft.com/en-us/library/ms180880(v=vs.80).aspx
+            </summary>
+            <param name="name">Name to search</param>
+            <param name="pageSize">The PageSize property sets the maximum number of items in each page of results that will be returned by a search</param>
+            <param name="sortExpression">Sort (column)expression</param>
+            <param name="sortDirection">Sort Order (Ascending/Descending), Default will be Ascending. </param>
+            <returns>List of User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Searcher.Slb#Central#Component#ActiveDirectory#ISearcher#SearchByName(System.String,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Search active directory user by name
+            For effective paging use precise filter criteria instead of generic.
+            This code works for searches returning up to 10,000 records at which point the LDAP Policy MaxTempTableSize is enforced and the search will return with an error.
+            This will be a paged search means client applications can provide the input params like rowIndex and records which needs to displayed per page
+            The records will be default sorted by column 'uidnumber' an integer value that uniquely identifies a user in an administrative domain and default sort order will be 'Ascending'.
+            </summary>
+            <param name="name">input name to search</param>
+            <param name="rowIndex">Start row index, For first row it will be 0, second row it will 1 likewise.</param>
+            <param name="recordsPerPage">Records to be shown per page</param>
+            <param name="sortExpression">Sort (column)expression, The valid attribute from active directory.</param>
+            <param name="sortDirection">Sort Order (Ascending/Descending), Default will be Ascending. </param>
+            <returns>List of active directory users.</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Searcher.Slb#Central#Component#ActiveDirectory#ISearcher#SearchByWhenCreated(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Search active directory user(s) by creation date.
+            To retrieve a set of results that is larger than 1000 items, PageSize set to a value that is less than or equal to 1000. 
+            The paging occurs transparently to the application and the application does not have to perform any special processing other than setting the PageSize property to the proper value.
+            https://msdn.microsoft.com/en-us/library/ms180880(v=vs.80).aspx
+            </summary>
+            <param name="createdDate">Creation date to search</param>
+            <param name="pageSize">The PageSize property sets the maximum number of items in each page of results that will be returned by a search</param>
+            <param name="sortExpression">Sort (column)expression</param>
+            <param name="sortDirection">Sort Order (Ascending/Descending), Default will be Ascending. </param>
+            <returns>List of User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Searcher.Slb#Central#Component#ActiveDirectory#ISearcher#SearchByWhenChanged(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Search active directory user(s) by changed date, This will search for users changed on or after the input date. 
+            The date format needs to be YYYYMMDD.
+            To retrieve a set of results that is larger than 1000 items, PageSize set to a value that is less than or equal to 1000. 
+            The paging occurs transparently to the application and the application does not have to perform any special processing other than setting the PageSize property to the proper value.
+            https://msdn.microsoft.com/en-us/library/ms180880(v=vs.80).aspx
+            </summary>
+            <param name="changedDate">Search for users changed on or after date in YYYYMMDD format</param>
+            <param name="pageSize">The PageSize property sets the maximum number of items in each page of results that will be returned by a search</param>
+            <param name="sortExpression">Sort (column)expression</param>
+            <param name="sortDirection">Sort Order (Ascending/Descending), Default will be Ascending. </param>
+            <returns>List of User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Searcher.Slb#Central#Component#ActiveDirectory#ISearcher#SearchAllUsers(System.Int32,System.String,System.String)">
+            <summary>
+            Search all active directory users.
+            To retrieve a set of results that is larger than 1000 items, PageSize set to a value that is less than or equal to 1000. 
+            The paging occurs transparently to the application and the application does not have to perform any special processing other than setting the PageSize property to the proper value.
+            https://msdn.microsoft.com/en-us/library/ms180880(v=vs.80).aspx
+            </summary>
+            <param name="pageSize">The PageSize property sets the maximum number of items in each page of results that will be returned by a search</param>
+            <param name="sortExpression">Sort (column)expression</param>
+            <param name="sortDirection">Sort Order (Ascending/Descending), Default will be Ascending. </param>
+            <returns>List of User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Searcher.Slb#Central#Component#ActiveDirectory#ISearcher#SearchAllActiveUsers(System.Int32,System.String,System.String)">
+            <summary>
+            Search all active users from active directory.
+            To retrieve a set of results that is larger than 1000 items, PageSize set to a value that is less than or equal to 1000. 
+            The paging occurs transparently to the application and the application does not have to perform any special processing other than setting the PageSize property to the proper value.
+            https://msdn.microsoft.com/en-us/library/ms180880(v=vs.80).aspx
+            </summary>
+            <param name="pageSize">The PageSize property sets the maximum number of items in each page of results that will be returned by a search</param>
+            <param name="sortExpression">Sort (column)expression</param>
+            <param name="sortDirection">Sort Order (Ascending/Descending), Default will be Ascending. </param>
+            <returns>List of User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Searcher.Slb#Central#Component#ActiveDirectory#ISearcher#SearchAllInactiveUsers(System.Int32,System.String,System.String)">
+            <summary>
+            Search all Inactive users from active directory.
+            To retrieve a set of results that is larger than 1000 items, PageSize set to a value that is less than or equal to 1000. 
+            The paging occurs transparently to the application and the application does not have to perform any special processing other than setting the PageSize property to the proper value.
+            https://msdn.microsoft.com/en-us/library/ms180880(v=vs.80).aspx
+            </summary>
+            <param name="pageSize">The PageSize property sets the maximum number of items in each page of results that will be returned by a search</param>
+            <param name="sortExpression">Sort (column)expression</param>
+            <param name="sortDirection">Sort Order (Ascending/Descending), Default will be Ascending. </param>
+            <returns>List of User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Searcher.FindUser(System.String,System.String)">
+            <summary>
+            Get a user from active directory by applying input filter criteria’s.
+            </summary>
+            <param name="filterExpression">Filter expression</param>
+            <param name="valueToFilter">Input value to filter</param>
+            <returns>Instance of type User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Searcher.FindAllUsers(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Get list of users from active directory by applying input filter criteria’s
+            </summary>
+            <param name="filterExpression">Filter expression</param>
+            <param name="valueToFilter">Input value to filter</param>
+            <param name="pageSize">This is a nullable type, it sets the maximum number of items in each page of results that will be returned by a search</param>
+            <param name="rowIndex">This is a nullable type, specifies start row index, For first row it will be 0, second row it will 1 likewise.</param>
+            <param name="recordsPerPage">This is a nullable type, specifies records to be shown per page</param>
+            <param name="sortExpression">Sort (column)expression, The valid attribute from active directory.</param>
+            <param name="sortDirection">Sort Order (Ascending/Descending), Default will be Ascending.</param>
+            <returns>List of type User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Searcher.ApplyPagingWithVirtualListView(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.DirectoryServices.DirectorySearcher)">
+            <summary>
+            Apply paging on directory searcher using virtual list view.
+            </summary>
+            <param name="rowIndex">Start row index, for first row it will be 0, second row it will 1 likewise.</param>
+            <param name="recordsPerPage">Records to be shown per page.</param>
+            <param name="sortExpression">Sort (column)expression.</param>
+            <param name="sortDirection">Sort Order (Ascending/Descending), Default will be Ascending.</param>
+            <param name="dirSearch">DirectorySearcher</param>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Searcher.ApplySortingOnDirectorySearcher(System.String,System.String,System.DirectoryServices.DirectorySearcher)">
+            <summary>
+            Apply Sorting On Directory Searcher.
+            </summary>
+            <param name="sortExpression">Sort (column)expression.</param>
+            <param name="sortDirection">Sort Order (Ascending/Descending), Default will be Ascending.</param>
+            <param name="dirSearch">DirectorySearcher</param>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Searcher.Dispose(System.Boolean)">
+            <summary>
+            Dispose Managed Reosurces
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="T:Slb.Central.Component.ActiveDirectory.Security">
+            <summary>
+            This class hold methods to perform user's authentication in active directory.
+            </summary>
+        </member>
+        <member name="T:Slb.Central.Component.ActiveDirectory.ISecurity">
+            <summary>
+             Holds the active directory user Authentication methods.
+            </summary>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.ISecurity.IsAuthenticUser(System.String,System.String)">
+            <summary>
+            Check if the user trying to connect to AD is authentic or not.
+            </summary>    
+            <param name="ldapUser">UserName</param>
+            <param name="ldapPassword">Password</param>
+            <returns>True/False</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.ISecurity.IsAuthenticUser(System.String,System.String,System.String)">
+            <summary>
+            Check if the user trying to connect to AD is authentic or not.
+            </summary>
+            <param name="ldapPath">LdapPath</param>
+            <param name="ldapUser">UserName</param>
+            <param name="ldapPassword">Password</param>
+            <returns>True/False</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.ISecurity.IsValidCredentials(System.String,System.String,System.String)">
+            <summary>
+            Check if the specified credentials are valid for user for a Domain.
+            </summary>
+            <param name="domain">Domain Name</param>
+            <param name="ldapUser">LDAP User Name</param>
+            <param name="ldapPassword">LDAP Password</param>
+            <returns>True/False</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.ISecurity.IsValidCredentials(System.String,System.String)">
+            <summary>
+            Check if the specified credentials are valid for user trying to connect to AD and return user if it's authenticated.
+            </summary>    
+            <param name="ldapUser">UserName</param>
+            <param name="ldapPassword">Password</param>
+            <returns>Instance of type User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Security.#ctor">
+            <summary>
+            Default Constructor to instantiate the Utility class.
+            Read the configuration from client's .config file.
+            </summary>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Security.Slb#Central#Component#ActiveDirectory#ISecurity#IsAuthenticUser(System.String,System.String,System.String)">
+            <summary>
+            Check if the user trying to connect to AD is authentic or not.
+            </summary>
+            <param name="ldapPath">LDAP Path</param>
+            <param name="ldapUser">UserName</param>
+            <param name="ldapPassword">Password</param>
+            <returns>True/False</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Security.Slb#Central#Component#ActiveDirectory#ISecurity#IsAuthenticUser(System.String,System.String)">
+            <summary>
+            Check if the user trying to connect to AD is authentic or not.
+            </summary>
+            <param name="ldapUser">UserName</param>
+            <param name="ldapPassword">Password</param>
+            <returns>True/False</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Security.Slb#Central#Component#ActiveDirectory#ISecurity#IsValidCredentials(System.String,System.String,System.String)">
+            <summary>
+            Check if the specified credentials are valid for user for a Domain.
+            </summary>
+            <param name="domain">Domain Name</param>
+            <param name="ldapUser">LDAP User Name</param>
+            <param name="ldapPassword">LDAP Password</param>
+            <returns>True/False</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Security.Slb#Central#Component#ActiveDirectory#ISecurity#IsValidCredentials(System.String,System.String)">
+            <summary>
+            Check if the specified credentials are valid for user trying to connect to AD and return user if it's authenticated.
+            </summary>    
+            <param name="ldapUser">UserName</param>
+            <param name="ldapPassword">Password</param>
+            <returns>Instance of type User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Security.IsValidUser(System.String,System.String,System.String)">
+            <summary>
+            Check if the entered user's credentials are valid or not.
+            </summary>
+            <param name="ldapPath">Ldap server path</param>
+            <param name="ldapUser">UserId(LdapId)</param>
+            <param name="ldapPassword">Password</param>
+            <returns>Instance of type User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Security.Dispose(System.Boolean)">
+            <summary>
+            Dispose Managed Reosurces
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="T:Slb.Central.Component.ActiveDirectory.Utility">
+            <summary>
+            This class will hold helper methods for Active Directory.
+            </summary>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Utility.GetMockUser">
+            <summary>
+            Get Mock User.
+            </summary>
+            <returns>User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Utility.GetMockUserList">
+            <summary>
+            Get List of Mock Users
+            </summary>
+            <returns>List of User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Utility.GetDirectoryEntryByDomainName(System.String)">
+            <summary>
+            Get the instance of type System.DirectoryServices.DirectoryEntry.
+            </summary>
+            <param name="domain">Domain name to search for</param>
+            <returns>DirectoryEntry for current domain</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Utility.GetDirectoryEntry(System.String)">
+            <summary>
+            Get the instance of type System.DirectoryServices.DirectoryEntry
+            </summary>
+            <param name="ldapPath">LDAP Path</param>       
+            <returns></returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Utility.GetDirectoryEntry(System.String,System.String,System.String)">
+            <summary>
+            Get the instance of type System.DirectoryServices.DirectoryEntry
+            </summary>
+            <param name="ldapPath">LDAP Path</param>
+            <param name="ldapUser">LDAP User Name</param>
+            <param name="ldapPassword">LDAP Password</param>
+            <returns></returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Utility.GetCurrentDomainPath">
+            <summary>
+            Get the root directory of data tree on the directory server.
+            https://msdn.microsoft.com/en-us/library/ms684291(v=vs.85).aspx
+            </summary>
+            <returns>string as current domain path</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Utility.Exists(System.String)">
+            <summary>
+            Check if the specified path is exists in the DirectoryEntry
+            </summary>
+            <param name="path">input path</param>
+            <returns></returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Utility.GetAllDomains">
+            <summary>
+            Get all the domains on the current forest.
+            </summary>
+            <returns>ArrayList of domains </returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Utility.GetFullDomainNameFromFriendlyDomain(System.String)">
+            <summary>
+            Get Fully Qualified Domain From Friendly Domain Name 
+            </summary>
+            <param name="friendlyDomainName">Friendly Domain Name</param>
+            <returns>String with the Domain Name</returns>       
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Utility.EnumerateGlobalCatalogs">
+            <summary>
+            The global catalog is a distributed data repository that contains a searchable, 
+            partial representation of every object in every domain in a multidomain Active Directory Domain Services (AD DS) forest.
+            </summary>
+            <returns>IEnumerable GlobalCatalog</returns>        
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Utility.GetLdapConnection(System.String,System.String,System.String)">
+            <summary>
+            Get LdapConnection object
+            </summary>
+            <param name="domain">Domain</param>
+            <param name="ldapUser">UserName</param>
+            <param name="ldapPassword">Password</param>     
+            <returns>LdapConnection</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Utility.GetLdapConnection(System.String,System.String,System.Security.SecureString)">
+            <summary>
+            Get LdapConnection object
+            </summary>
+            <param name="domain">Domain</param>
+            <param name="ldapUser">UserName</param>
+            <param name="ldapPassword">Input password in the SecureString format</param>     
+            <returns>LdapConnection</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Utility.GetRequiredStringByCheckingNull(System.String,System.String)">
+            <summary>
+            Get required input string by checking null.
+            </summary>
+            <param name="inputString">Input string</param>
+            <param name="paramName">String if not null else throw null exception.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Utility.BuildLdapQuery(System.String,System.String)">
+            <summary>
+            Build the ldap query using filter expression
+            </summary>
+            <param name="filterExpression">Filter Expression</param>
+            <param name="valueToFilter">Value To Filter</param>
+            <returns></returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Utility.BuildUserSearcher(System.DirectoryServices.DirectoryEntry,System.String)">
+            <summary>
+            Build the user search.
+            </summary>
+            <param name="directoryEntry">DirectoryEntry</param>
+            <param name="attributes">attributes from the config file.</param>
+            <returns>DirectorySearcher</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Utility.GetPropertyValue(System.DirectoryServices.SearchResult,System.String)">
+            <summary>
+            Get Property Value From AD Search Results
+            </summary>
+            <param name="searchResult">SearchResult</param>
+            <param name="propertyName">Property Name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Utility.GetUserDetailsFromSearchResult(System.DirectoryServices.SearchResult)">
+            <summary>
+            Get User from SearchResult
+            </summary>
+            <param name="result">SearchResult</param>
+            <returns>User</returns>
+        </member>
+        <member name="M:Slb.Central.Component.ActiveDirectory.Utility.Dispose(System.Boolean)">
+            <summary>
+            Dispose Managed Reosurces
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="T:Slb.Central.Component.ActiveDirectory.User">
+            <summary>
+            This class will hold the active directory user information.
+            </summary>
+        </member>
+        <member name="P:Slb.Central.Component.ActiveDirectory.User.DisplayName">
+            <summary>
+            Display Name
+            </summary>
+        </member>
+        <member name="P:Slb.Central.Component.ActiveDirectory.User.GivenName">
+            <summary>
+            First Name 
+            </summary>
+        </member>
+        <member name="P:Slb.Central.Component.ActiveDirectory.User.Sn">
+            <summary>
+            Last Name
+            </summary>
+        </member>
+        <member name="P:Slb.Central.Component.ActiveDirectory.User.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:Slb.Central.Component.ActiveDirectory.User.SamAccountName">
+            <summary>
+            UserId/LdapId
+            </summary>
+        </member>
+        <member name="P:Slb.Central.Component.ActiveDirectory.User.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:Slb.Central.Component.ActiveDirectory.User.Department">
+            <summary>
+            Department
+            </summary>
+        </member>
+        <member name="P:Slb.Central.Component.ActiveDirectory.User.MemberOf">
+            <summary>
+            Member Of
+            </summary>
+        </member>
+        <member name="P:Slb.Central.Component.ActiveDirectory.User.L">
+            <summary>
+            City
+            </summary>
+        </member>
+        <member name="P:Slb.Central.Component.ActiveDirectory.User.Co">
+            <summary>
+            Country
+            </summary>
+        </member>
+        <member name="P:Slb.Central.Component.ActiveDirectory.User.LastLogOn">
+            <summary>
+            Last LogOn
+            </summary>
+        </member>
+        <member name="P:Slb.Central.Component.ActiveDirectory.User.UserPrincipalName">
+            <summary>
+            Login Name 
+            </summary>
+        </member>
+        <member name="P:Slb.Central.Component.ActiveDirectory.User.EmployeeNumber">
+            <summary>
+            Employee Number(GIN)
+            </summary>
+        </member>
+        <member name="P:Slb.Central.Component.ActiveDirectory.User.EmployeeType">
+            <summary>
+            Employee Type
+            </summary>
+        </member>
+        <member name="P:Slb.Central.Component.ActiveDirectory.User.DistinguishedName">
+            <summary>
+            Distinguished Name
+            </summary>
+        </member>
+        <member name="P:Slb.Central.Component.ActiveDirectory.User.UidNumber">
+            <summary>
+            UidNumber
+            </summary>
+        </member>
+        <member name="P:Slb.Central.Component.ActiveDirectory.User.Title">
+            <summary>
+            Title
+            </summary>
+        </member>
+        <member name="P:Slb.Central.Component.ActiveDirectory.User.Cn">
+            <summary>
+            Cn
+            </summary>
+        </member>
+        <member name="P:Slb.Central.Component.ActiveDirectory.User.SecurityStatus">
+            <summary>
+            Security Status
+            </summary>
+        </member>
+        <member name="P:Slb.Central.Component.ActiveDirectory.User.AuthResult">
+            <summary>
+            Auth Result
+            </summary>
+        </member>
+    </members>
+</doc>

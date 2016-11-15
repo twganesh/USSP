@@ -1,13 +1,9 @@
 using System.Web.Mvc;
 using Microsoft.Practices.Unity;
-using USSP.Repository;
-using USSP.Models.CORE;
-using USSP.Service;
-using System.Configuration;
-using Repository;
-using Service;
+using SLB.USSP.Repository;
+using SLB.USSP.Service;
 
-namespace USSP
+namespace SLB.USSP.Web
 {
     public static class UnityConfig
     {

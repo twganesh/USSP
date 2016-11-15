@@ -3,7 +3,7 @@ using System.Data.Entity.Infrastructure;
 using System.Data.Objects;
 using System.Linq;
 
-namespace USSP.Repository
+namespace SLB.USSP.Repository
 {
 
     public abstract class RepositoryBase<T> where T : class

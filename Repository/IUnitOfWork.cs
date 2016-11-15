@@ -1,4 +1,4 @@
-﻿namespace USSP.Repository
+﻿namespace SLB.USSP.Repository
 {
     public interface IUnitOfWork
     {

@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity.Validation;
 using System.Diagnostics;
 
-namespace USSP.Repository
+namespace SLB.USSP.Repository
 {
     public class UnitOfWork : IUnitOfWork
     {

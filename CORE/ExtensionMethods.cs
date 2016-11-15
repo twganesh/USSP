@@ -6,10 +6,29 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CORE
+namespace SLB.USSP.Core
 {
     public static class ExtensionMethods
     {
+        public static string FormatString(this string source, params object[] args)
+        {
+            return string.Format(source, args);
+        }
+
+        public static string NewGuid(this string dummy)
+        {
+            return Guid.NewGuid().ToString();
+        }
+
+        public static bool IsNullOrEmpty(this string str)
+        {
+            return String.IsNullOrEmpty(str);
+        }
+
+        public static bool IsNullOrWhiteSpace(this string str)
+        {
+            return String.IsNullOrWhiteSpace(str);
+        }
         public static IOrderedQueryable<T> OrderBy<T>(this IQueryable<T> source, string property)
         {
             return ApplyOrder<T>(source, property, "OrderBy");

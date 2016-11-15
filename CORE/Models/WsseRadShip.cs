@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace CORE.Models
+namespace SLB.USSP.Core.Models
 {
     [Table("WSSE_RAD_SHIP")]
     public class WsseRadShip

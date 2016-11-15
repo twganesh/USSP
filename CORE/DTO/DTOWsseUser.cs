@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CORE.DTO
+namespace SLB.USSP.Core.DTO
 {
     public class DTOWsseUser
     {

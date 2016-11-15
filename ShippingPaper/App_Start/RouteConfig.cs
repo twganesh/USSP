@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace USSP
+namespace SLB.USSP.Web
 {
     public class RouteConfig
     {
@@ -16,7 +16,9 @@ namespace USSP
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+               namespaces: new[] { "SLB.USSP.Web.Controllers" }
+
             );
         }
     }

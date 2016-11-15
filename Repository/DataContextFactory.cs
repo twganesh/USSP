@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace USSP.Repository
+namespace SLB.USSP.Repository
 {
     public class DataContextFactory : 
         IDataContextFactory,

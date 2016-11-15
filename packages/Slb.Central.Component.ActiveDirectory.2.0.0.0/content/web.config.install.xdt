@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <configSections xdt:Transform="InsertIfMissing">
+    <section name="ActiveDirectoryAppSettings" type="System.Configuration.NameValueFileSectionHandler,System, Version=1.0.3300.0, Culture=neutral,PublicKeyToken=b77a5c561934e089" xdt:Locator="Match(name)" xdt:Transform="InsertIfMissing"/>
+  </configSections>
+  <ActiveDirectoryAppSettings xdt:Transform="InsertIfMissing">
+    <add key="LdapPath" value="LDAP://DIR.SLB.com"  />
+    <add key="LdapAlias" value=""  />
+    <add key="LdapPassword" value=""  />
+  </ActiveDirectoryAppSettings>
+</configuration>
+

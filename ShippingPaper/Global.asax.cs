@@ -7,9 +7,8 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Optimization;
-using USSP;
 
-namespace ShippingPaper
+namespace SLB.USSP.Web
 {
     public class Global : System.Web.HttpApplication
     {

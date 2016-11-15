@@ -2,7 +2,7 @@
 using System.Web;
 using Microsoft.Practices.Unity;
 
-namespace USSP
+namespace SLB.USSP.Web
 {
     public class HttpContextLifetimeManager<T> :
         LifetimeManager,

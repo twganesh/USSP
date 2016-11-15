@@ -1,14 +1,13 @@
-﻿using Service;
-using ShippingPaper.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using CORE;
+using SLB.USSP.Service;
+using SLB.USSP.Core;
+using SLB.USSP.Web.Models;
 
-
-namespace ShippingPaper.Controllers
+namespace SLB.USSP.Web.Controllers
 {
     public class ShippingPaperController : USSPController
     {
@@ -75,7 +74,7 @@ namespace ShippingPaper.Controllers
                 model.CurrentPage = gridOptions.CurrentPage;
                 model.SortDirection = gridOptions.SortDirection;
                 model.PageSize = gridOptions.PageSize;
-                model.SortDirection = CORE.Enums.SortDirection.Ascending.ToString();
+                model.SortDirection = Enums.SortDirection.Ascending.ToString();
                 model.SortBy = "Id";
             }          
             model.Data = data;         

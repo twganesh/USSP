@@ -1,11 +1,12 @@
-﻿using CORE.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SLB.USSP.Core.Models;
 
-namespace Repository
+namespace SLB.USSP.Repository
 {
     public interface IWsseMatShipRepository : IRepository<WsseMatShip>
     {

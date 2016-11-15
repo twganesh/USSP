@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repository
+namespace SLB.USSP.Repository
 {
     public interface IRepository<T> where T : class
     {

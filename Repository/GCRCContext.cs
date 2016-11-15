@@ -1,4 +1,4 @@
-﻿using USSP.Models.CORE;
+﻿using SLB.USSP.Core.Models;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data;
@@ -9,9 +9,9 @@ using System.Linq;
 using System.Data.EntityClient;
 using System.Data.Common;
 using Devart.Data.Oracle;
-using CORE.Models;
 
-namespace USSP.Repository
+
+namespace SLB.USSP.Repository
 {
     /// <summary>
     /// http://dotnetspeak.com/2012/01/oracle-odp-and-entity-framework-code-first-4-2

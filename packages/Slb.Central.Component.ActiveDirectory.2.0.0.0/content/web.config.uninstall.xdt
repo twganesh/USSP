@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <configSections>
+    <section name="ActiveDirectoryAppSettings" type="System.Configuration.NameValueFileSectionHandler,System, Version=1.0.3300.0, Culture=neutral,PublicKeyToken=b77a5c561934e089" xdt:Transform="Remove" xdt:Locator="Match(name)"/>
+  </configSections>
+  <ActiveDirectoryAppSettings xdt:Transform="Remove">
+    <add key="LdapPath" value="LDAP://DIR.SLB.com"  />
+    <add key="LdapAlias" value=""  />
+    <add key="LdapPassword" value=""  />
+  </ActiveDirectoryAppSettings>
+  <!-- remove if section is empty -->
+  <configSections xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />
+</configuration>

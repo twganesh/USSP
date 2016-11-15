@@ -1,12 +1,13 @@
-﻿using CORE.Models;
-using Repository;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SLB.USSP.Core.Models;
+using SLB.USSP.Repository;
 
-namespace Service
+namespace SLB.USSP.Service
 {
     public class ShippingPaperProvider : IShippingPaperProvider
     {

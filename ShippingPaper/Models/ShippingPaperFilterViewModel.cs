@@ -1,11 +1,9 @@
-﻿using CORE.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using static CORE.Enums;
 
-namespace ShippingPaper.Models
+namespace SLB.USSP.Web.Models
 {
 
     public class GridResultViewModel<T>

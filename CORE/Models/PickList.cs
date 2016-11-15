@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
-namespace USSP.Models.CORE
+namespace SLB.USSP.Core.Models
 {
     [Table("WSSE_PICKLISTS")]
     public class PickList

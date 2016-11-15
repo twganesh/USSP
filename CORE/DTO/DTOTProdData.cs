@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace CORE.DTO
+namespace SLB.USSP.Core.DTO
 {
     public class DTOTProdData
     {
