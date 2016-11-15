@@ -35,8 +35,11 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper\UserProfile.cs" />
+    <Compile Include="ICacheProvider.cs" />
+    <Compile Include="UserInfoProvider.cs" />
     <Compile Include="IPickListProvider.cs" />
     <Compile Include="IShippingPaperProvider.cs" />
     <Compile Include="ITMSShipmentProvider.cs" />
@@ -63,10 +69,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Service References\ShipmentStopServiceReference\SLB.USSP.Service.ShipmentStopServiceReference.ODShipmentQryServiceResponse.datasource">
+    <None Include="Service References\ShipmentStopServiceReference\Service.ShipmentStopServiceReference.ODShipmentQryServiceResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ShipmentStopServiceReference\SLB.USSP.Service.ShipmentStopServiceReference.TMSShipmentDetailsTMShipment.datasource">
+    <None Include="Service References\ShipmentStopServiceReference\Service.ShipmentStopServiceReference.TMSShipmentDetailsTMShipment.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ShipmentStopServiceReference\Untitled.wsdl" />

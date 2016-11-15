@@ -8,5 +8,8 @@ namespace SLB.USSP.Core
 {
     public class Constants
     {
+
+
+        public static readonly string DOMAIN = "slb.com";
     }
 }

@@ -1,20 +1,10 @@
-﻿
+﻿@model SLB.USSP.Web.Controllers.LoginViewModel
 @{
     Layout = null;
+    var loginUrl = System.Configuration.ConfigurationManager.AppSettings["WindowsAuthenticationSite"] + "/home/GetAuthTicket";
+    var haltAutoLogon = (bool)ViewData["LoggedOff"];
 }
 
-@*<!DOCTYPE html>
-
-    <html>
-    <head>
-        <meta name="viewport" content="width=device-width" />
-        <title>Login</title>
-    </head>
-    <body>
-        <div>
-        </div>
-    </body>
-    </html>*@
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,50 +14,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>US Shipping Paper</title>
+    @Styles.Render("~/Content/bootstrap")
+    @Scripts.Render("~/bundles/jquery")
+
+    @Scripts.Render("~/bundles/bootstrap")
+
+
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/css/login.css" rel="stylesheet" />
+    <script type="text/javascript">
+        $(function () {
+            $('#UserName').focus();
+            $("#SSOLogin").val(false);
+            if ("@haltAutoLogon" == "False") {
+                TryAutoLogin();
+            }
+        })
+
+
+        function TryAutoLogin() {
+
+            $.ajax({
+                url: '@loginUrl' + '?dummy=' + new Date().getTime(),
+
+                type: "GET",
+
+                contentType: "application/json; charset=utf-8",
+
+                dataType: "jsonp",
+
+                jsonpCallback: "LoginSuccess",
+
+                error: function (jqXHR, textStatus, errorThrown) {
+                    $("#SSOLogin").val(false);
+                    alert("Windows Login was not successful.  You may use your LDAP to login. Error: " + errorThrown);
+
+
+                }
+            });
+        }
+
+        function LoginSuccess(data) {
+            if (data != undefined && data != "") {
+                $("#SSOLogin").val(true);
+                $("#Username").val(data);
+                $("#Password").val("thisisalongpassword");
+                $("form:first").submit();
+            }
+            else {
+                alert("Your windows login indicates that you are not a registered user.  You may use your LDAP to login, or view the help menu to learn how to gain access");
+
+            }
+        }
+
+
+
+    </script>
 </head>
 <body>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 col-centered" id="loginBox">
-                <div class="row loginBoxHeader">
-                    <div class="col-md-12">
-                        <div class="pull-left logo">
-                            <a href="#" class="ussp-logo" alt="USSP"></a>
-                        </div>
-                        <div class="logo">
-                            <a href="#" class="slb-logo" alt="schlumberger"></a>
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-centered" id="loginBox">
+                    <div class="row loginBoxHeader">
+                        <div class="col-md-12">
+                            <div class="pull-left logo">
+                                <a href="#" class="ussp-logo" alt="USSP"></a>
+                            </div>
+                            <div class="logo">
+                                <a href="#" class="slb-logo" alt="schlumberger"></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row grayBorder">
-                    <div class="col-md-6">
-                        @using (Html.BeginForm("SSOLogin", "Account", FormMethod.Post))
-                        {
-                            @Html.AntiForgeryToken()
+                    <div class="row grayBorder">
+                        <div class="col-md-6">
+
+
+                            @Html.HiddenFor(m => m.SSOLogin, new { @id = "SSOLogin" })
                             <div class="loginMsg padding"><b>Click here for automatic login to US Shipping application using your windows login.</b></div>
                             <div class="form-group ssoLogin">
                                 <button type="submit" class="btn btn-primary ssoLogin btn-submit"><b>SSO Login</b></button>
                             </div>
-                        }
-                    </div>
-                    <div class="col-md-6 grayBorderleft">
 
-                        @using (Html.BeginForm("Login", "Account", FormMethod.Post))
-                        {
-                            @Html.AntiForgeryToken()
+                        </div>
+                        <div class="col-md-6 grayBorderleft">
+
+
+
+
                             <div class="loginMsg padding"><b>Please login using your Ldapalias, Full name & LdapUser Id.</b></div>
                             <div class="formPadding">
                                 <form name="" method="">
                                     <div class="form-group row">
                                         <div class="col-md-3"><span class="txtlabel">Username</span></div>
-                                        <div class="col-md-9"><input class="form-control inputHeightWidth" id="txtUsername" name="Username" type="text"></div>
+                                        <div class="col-md-9">
+
+                                            @Html.TextBoxFor(m => m.Username, new { @id = "Username", @class = "form-control inputHeightWidth" })
+                                        </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-md-3"><span class="txtlabel">Password</span></div>
-                                        <div class="col-md-9"><input class="form-control inputHeightWidth" id="txtPassword" name="Password" type="password"></div>
+                                        <div class="col-md-9">
+
+                                            @Html.PasswordFor(m => m.Password, new { @id = "Password", @class = "form-control inputHeightWidth" })
+                                        </div>
                                     </div>
                                     <div class="form-group pull-right row rowMargin">
                                         <div class="displayInline"><button type="submit" class="btn btn-primary btn-sm buttonHeightWidth btn-submit"><b>Login</b></button></div>
@@ -75,19 +127,20 @@
                                     </div>
                                 </form>
                             </div>
-                        }
+
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div>
-            <div class="copyright">
-                &copy; 2016 Schlumberger Limited. All rights reserved.
+            <div>
+                <div class="copyright">
+                    &copy; 2016 Schlumberger Limited. All rights reserved.
+                </div>
             </div>
         </div>
-    </div>
 
-    <script src="~/Scripts/jquery-2.1.4.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+
+
+    }
 </body>
 </html>

@@ -8,6 +8,7 @@ using SLB.USSP.Service;
 
 namespace SLB.USSP.Web.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly IShippingPaperProvider _shippingPaperProvider;

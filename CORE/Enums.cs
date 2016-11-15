@@ -14,5 +14,11 @@ namespace SLB.USSP.Core
             Ascending,
             Descending
         }
+
+        public enum UserRole
+        {
+            Administrator = 1,
+            User = 2
+        }
     }
 }

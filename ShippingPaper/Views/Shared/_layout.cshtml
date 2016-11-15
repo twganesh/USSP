@@ -64,7 +64,12 @@
                     </nav>
                     <nav class="menu-items col-md-3">
                         <ul class="pull-right">
-                            <li><a href="#">Logout</a></li>
+                            <li>
+                                @using (Html.BeginForm("Logout", "Account", FormMethod.Post, new { id = "logoutForm" }))
+                                {
+                                    <a href="javascript:document.getElementById('logoutForm').submit()">Logout</a>
+                                }
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -87,7 +92,7 @@
                     <a class="link" href="#">Privacy Statement</a>
                 </div>
             </div>
-        </footer>        
+        </footer>
     </div>
 </body>
 </html>
